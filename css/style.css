@@ -1,0 +1,728 @@
+:root {
+  --title-color: #212121;
+  --text-color: #757575;
+  --white: #ffffff;
+  --akcent-color: #2196f3;
+  --link-color: rgba(255, 255, 255, 0.6);
+  --logo2-color: #000000;
+  --baner-bcg-color: #2f303a;
+  --gray-bcg-color: #f5f4fa;
+  --border-header: #ececec;
+  --border-portfolio: #eeeeee;
+  --overlay: #c4c4c4;
+  --social-icon: #afb1b8;
+  --background: rgba(47, 48, 58, 0.4);
+  --trancision: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  color: var(--title-color);
+  background-color: var(--white);
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.item .link:hover,
+.item .link:focus,
+.item .link:active {
+  color: var(--akcent-color);
+  cursor: pointer;
+}
+/*header
+.page-header {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}*/
+/*logo*/
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*style for section*/
+.section {
+  padding: 94px 0;
+}
+
+/*style for title*/
+.section-title {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+.title {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.text {
+  margin: 0;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+/* hiden title */
+.hiden-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* ------------------------------------Header-------------------------------------- */
+.logo-web {
+  color: var(--akcent-color);
+
+  font-family: Raleway, sans-serif;
+}
+.logo {
+  margin-right: 93px;
+  color: var(--logo2-color);
+  text-decoration: none;
+
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  line-height: 1.2;
+}
+.page-header {
+  padding: 25px 0;
+  border-bottom: 1px solid var(--border-header);
+}
+.page-header .flexbox {
+  align-items: center;
+}
+
+/*site-nav*/
+.navigation {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  display: flex;
+  margin-left: 0px;
+}
+
+.site-nav .link {
+  padding: 32px 0;
+
+  color: var(--title-color);
+
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: var(--trancision);
+}
+
+.active {
+  position: relative;
+  padding: 32px 0;
+  color: var(--akcent-color);
+  text-decoration: none;
+}
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+.active::after {
+  display: flex;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--akcent-color);
+  bottom: -2%;
+}
+
+/* adress header*/
+/*link style*/
+.site-adr {
+  align-items: center;
+  margin-left: auto;
+  letter-spacing: 0.02em;
+
+  border: none;
+}
+
+.site-adr .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.site-adr .link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+  transition: var(--trancision);
+}
+
+/* конвертик и телефон возле почты */
+.site-adr .icon {
+  margin-right: 10px;
+  fill: var(--text-color);
+  transition: fill var(--trancision);
+}
+
+.site-adr .item:hover .icon {
+  fill: var(--akcent-color);
+}
+
+/* .site-adr.link::before {
+  content: "";
+}
+main */
+/*style fo poster section*/
+
+.overlay {
+  background-color: var(--overlay);
+}
+.poster {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1600px;
+  height: 600px;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right,
+      var(--background),
+      var(--background)
+    ),
+    url(../image/backgr-poster.jpg);
+}
+
+.main-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.button-poster {
+  /* display: inline-block; */
+  padding: 10px 32px;
+
+  font-size: 16px;
+  line-height: 1.87;
+
+  letter-spacing: 0.06em;
+  background-color: var(--akcent-color);
+  color: var(--white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+
+  text-decoration: none;
+}
+
+/*style for advantage section*/
+.advantage {
+  padding-bottom: 0;
+}
+
+/* добавляем блоки для иконок сверху списка преимуществ с помощью псевдоелемента */
+
+.list-advantage > .item::before {
+  display: block;
+  margin-bottom: 30px;
+
+  content: "";
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--gray-bcg-color);
+  border-radius: 4px;
+}
+.icon-item::before {
+  padding: 25px 100px;
+}
+/* добавляем  иконки сверху списка преимуществ с помощью псевдоелемента */
+.icon-antena::before {
+  padding: 25px 100px;
+  background-image: url(../image/antenna.svg);
+}
+.icon-clock::before {
+  padding: 25px 100px;
+  background-image: url(../image/clock.svg);
+}
+.icon-diagram::before {
+  padding: 25px 100px;
+  background-image: url(../image/diagram.svg);
+}
+.icon-astronaut::before {
+  padding: 25px 100px;
+  background-image: url(../image/astronaut.svg);
+}
+
+.list-advantage .item {
+  width: calc((100% - 30px * 3) / 4);
+  margin-right: 30px;
+}
+
+.list-advantage .item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.list-advantage .title {
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.list-advantage .text {
+  line-height: 1.7;
+}
+
+/*style for чем мы занимаемся*/
+
+.work-list .item:nth-child(3n) {
+  margin-right: 0px;
+}
+.work-list .item {
+  width: calc((100% - 30px * 2) / 3);
+  margin-right: 30px;
+}
+
+/* контейнер для рисунков, чтоб можно было позиционировать */
+.work-thumb {
+  position: relative;
+}
+.thumb-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 27px;
+  margin: 0;
+  text-align: center;
+  height: 70px;
+  width: 100%;
+
+  color: var(--white);
+  background: rgba(47, 48, 58, 0.8);
+  text-transform: uppercase;
+}
+/*style for command*/
+.command {
+  background: var(--gray-bcg-color);
+}
+.comand-list .item:nth-child(4n) {
+  margin-right: 0px;
+}
+.comand-list .item {
+  width: calc((100% - 30px * 3) / 4);
+  margin-right: 30px;
+  background-color: var(--white);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+/* padding for comands name and profeccion */
+.comander-container {
+  padding: 30px 0 16px;
+}
+
+.comand-list .title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.comand-list .text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+/* style for social link in command */
+.social-container {
+  padding-bottom: 30px;
+}
+.social {
+  display: flex;
+  justify-content: center;
+}
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* style  for link in sosial list */
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: var(--trancision);
+}
+.social-item .icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--social-icon);
+  transition: fill var(--trancision);
+}
+/* еффект ховера для соц сетей фон */
+.social-link:hover,
+.social-link:focus {
+  background: var(--akcent-color);
+}
+/* еффект ховера для соц сетей иконки */
+.social-link:hover .icon,
+.social-link:focus .icon {
+  fill: var(--white);
+}
+/* еффекты для списка наши клиенты */
+/* выравнивает по центру */
+
+.client-item {
+  display: flex;
+  justify-content: center;
+
+  width: calc((100% - 30px * 5) / 6);
+
+  height: 90px;
+  border: 1px solid var(--social-icon);
+  border-radius: 4px;
+  transition: var(--trancision);
+}
+.client-item:not(:last-child) {
+  /* убираем марджины у последнего елемента */
+  margin-right: 30px;
+}
+
+/* выравниваем иконки по центру*/
+.client-item .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* цвет для иконок */
+.client-item .icon {
+  fill: var(--social-icon);
+  transition: fill var(--trancision);
+}
+/* ховер для рамок*/
+.client-item:hover,
+.client-item:focus {
+  border-color: var(--akcent-color);
+}
+/* ховер для иконок*/
+.client-item:hover .icon,
+.icon .client-item:focus .icon {
+  fill: var(--akcent-color);
+}
+/*----------------footer---------------------------*/
+/*позиционирование двох дивов*/
+.footer-flexbox {
+  display: flex;
+  align-items: baseline;
+}
+
+.page-foter {
+  background: var(--baner-bcg-color);
+  font-weight: 400;
+  line-height: 1.7;
+}
+/* описываем контейнер контактов в футере, задаю верхний и нижний падинги*/
+.foter-container {
+  padding: 60px 0;
+  margin-right: 70px;
+}
+.logo-foter {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--white);
+  text-decoration: none;
+
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  line-height: 1.2;
+}
+.asdress {
+  flex-direction: column;
+}
+.foter-container .footer-link {
+  margin-top: 9px;
+  margin-bottom: 0px;
+}
+.adress .text {
+  margin: 0;
+
+  color: var(--white);
+  font-style: normal;
+}
+.adress .link {
+  display: block;
+  color: var(--link-color);
+  font-style: normal;
+  transition: var(--trancision);
+}
+
+.adress .link:hover,
+.adress .link:focus {
+  color: var(--akcent-color);
+  cursor: pointer;
+}
+
+/* ---------------колонка с соцсетями в футере----------------- */
+
+/* стили для заголовка футера*/
+.footer-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  color: var(--white);
+  text-transform: uppercase;
+}
+/* стили для соц сетей футера */
+.footer-social {
+  display: flex;
+}
+.footer-social .item:not(:last-child) {
+  margin-right: 10px;
+}
+/* серый фон кружочка */
+
+/* style  for link in sosial list */
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+
+  border-radius: 50%;
+  transition: background-color var(--trancision);
+}
+/* стиль для иконок соц. сетей футера */
+.footer-social .icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--white);
+}
+/* ховер для ссылок соц сетей */
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background: var(--akcent-color);
+}
+/* !!!еффект ховера для иконок соц сетей соц сетей такой же как и усоц.сетей команды, поэтому отдельно не создавала */
+.footer-social-link:hover .icon,
+.footer-social-link:focus .icon {
+  fill: var(--white);
+}
+/*style for portfolio*
+/*title portfolio*/
+
+/*style for button portfolio*/
+/* hiden title for h1 in portfolio  */
+
+.list-button {
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.list-button .item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* position for button portfolio*/
+
+.button-portfolio {
+  padding: 6px 22px;
+  color: var(--title-color);
+  background: var(--gray-bcg-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  border-radius: 4px;
+  transition: var(--trancision);
+  border: none;
+}
+
+.button-portfolio:hover,
+.button-portfolio:focus {
+  color: var(--white);
+  background: var(--akcent-color);
+  cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--akcent-color);
+  border-color: var(--akcent-color);
+  outline: none;
+  border: none;
+}
+/*grid for servse list*/
+
+.list-service .item {
+  width: calc((100% - 30px * 2) / 3);
+  margin-right: 30px;
+  margin-left: 0;
+  margin-bottom: 30px;
+
+  border: 1px solid var(--border-portfolio);
+  transition: var(--trancision);
+}
+
+.list-service .item:nth-child(3n) {
+  margin-right: 0;
+}
+.list-service .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.servise-container {
+  padding: 20px 24px;
+}
+/*portfolio service*/
+.servise-title {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  color: var(--title-color);
+}
+.list-service .text {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* Ховер и фокус для списка по сервису */
+
+.list-service .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+/* оверлей для списка сервиса */
+.portfolio-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-text {
+  display: inline-block;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--white);
+  transform: translatey(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* переход для проектов */
+.list-service .portfolio-overlay:hover .overlay-text,
+.list-service .portfolio-overlay:focus .overlay-text {
+  transform: translatey(0);
+}
+
+/*----- ---модальное окно--------- */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--trancision);
+}
+/* скрываю модальное окно */
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none; /*проникает сквозь слой и выбирать и нажимать на элементы страницы  */
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 528px;
+  min-height: 581px;
+
+  background: var(--white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--trancision);
+}
+/* кнопка для закрития */
+.bt-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  padding: 6px;
+
+  background-color: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  color: var(--logo-color);
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+/* стиль иконки */
+.modal-icon {
+  width: 18px;
+  height: 18px;
+  fill: var(--logo2-color);
+}
