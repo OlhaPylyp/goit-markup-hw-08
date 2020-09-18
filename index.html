@@ -586,6 +586,50 @@
             <use href="./image/sprite.svg#icon-Vector"></use>
           </svg>
         </button>
+        <form class="form" autocomplete="off">
+          <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+
+          <label for="name">Имя</label>
+          <input type="text" name="name" id="name" placeholder=" " />
+          <svg class="icon">
+            <use
+              href="./image/sprite.svg#icon-person"
+              width="18px"
+              height="18px"
+            ></use>
+          </svg>
+          <label for="tel">Телефон</label>
+          <input type="tel" name="tel" id="tel" placeholder=" " />
+          <svg class="icon">
+            <use
+              href="./image/sprite.svg#icon-phone-black-18dp-1"
+              width="18px"
+              height="18px"
+            ></use>
+          </svg>
+          <label for="mail">Почта</label>
+          <input type="email" name="mail" id="mail" placeholder=" " />
+          <svg class="icon">
+            <use
+              href="./image/sprite.svg#icon-email-black-18dp-1"
+              width="18px"
+              height="18px"
+            ></use>
+          </svg>
+          <label for="comment">Коментарий</label>
+          <textarea
+            name="comment"
+            rows="5"
+            id="comment"
+            placeholder="Введите текст"
+          />
+          <label for="agree"
+            >Соглашаюсь с рассылкой и принимаю
+            <span>Условия договора</span></label
+          >
+          <input id="agree" name="agree" type="checkbox" value="" />
+          <button type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/script.js"></script>

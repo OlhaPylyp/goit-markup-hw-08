@@ -137,7 +137,7 @@ img {
   cursor: pointer;
   font-weight: 500;
   letter-spacing: 0.02em;
-  transition: var(--trancision);
+  transition: all var(--trancision);
 }
 
 .active {
@@ -185,7 +185,7 @@ img {
 
   letter-spacing: 0.02em;
   color: var(--text-color);
-  transition: var(--trancision);
+  transition: all var(--trancision);
 }
 
 /* конвертик и телефон возле почты */
@@ -205,9 +205,6 @@ img {
 main */
 /*style fo poster section*/
 
-.overlay {
-  background-color: var(--overlay);
-}
 .poster {
   display: flex;
   margin-right: auto;
@@ -220,6 +217,7 @@ main */
   flex-direction: column;
   justify-content: center;
   background-size: cover;
+  background-color: var(--overlay);
   background-image: linear-gradient(
       to right,
       var(--background),
@@ -394,7 +392,7 @@ main */
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition: var(--trancision);
+  transition: all var(--trancision);
 }
 .social-item .icon {
   width: 20px;
@@ -497,7 +495,7 @@ main */
   display: block;
   color: var(--link-color);
   font-style: normal;
-  transition: var(--trancision);
+  transition: all var(--trancision);
 }
 
 .adress .link:hover,
@@ -581,7 +579,7 @@ main */
   line-height: 1.6;
   text-align: center;
   border-radius: 4px;
-  transition: var(--trancision);
+  transition: all var(--trancision);
   border: none;
 }
 
@@ -606,7 +604,7 @@ main */
   margin-bottom: 30px;
 
   border: 1px solid var(--border-portfolio);
-  transition: var(--trancision);
+  transition: allvar(--trancision);
 }
 
 .list-service .item:nth-child(3n) {
