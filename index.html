@@ -588,57 +588,73 @@
         </button>
         <!-- --------------Форма -->
         <form class="form" autocomplete="off">
-          <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
-          <div class="form-field">
-            <label for="name">Имя</label>
-            <input type="text" name="name" id="name" placeholder=" " />
-            <svg class="icon">
-              <use
-                href="./image/sprite.svg#icon-person"
-                width="18px"
-                height="18px"
-              ></use>
-            </svg>
-          </div>
-          <div class="form-field">
-            <label for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel" placeholder=" " />
+          <div class="form-conteiner"></div>
+            <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
+            <div class="form-field">
+              <label class="form-label" for="name">Имя</label>
+              <input
+                class="form-input"
+                type="text"
+                name="name"
+                id="name"
+                placeholder=" "
+              />
+              <svg class="icon form-icon"width="18px"
+                  height="18px">
+                <use
+                  href="./image/sprite.svg#icon-person"
+                  
+                ></use>
+              </svg>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="tel">Телефон</label>
+              <input
+                class="form-input"
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder=" "
+              />
 
-            <svg class="icon">
-              <use
-                href="./image/sprite.svg#icon-phone-black-18dp-1"
-                width="18px"
-                height="18px"
-              ></use>
-            </svg>
-          </div>
-          <div class="form-field">
-            <label for="mail">Почта</label>
-            <input type="email" name="mail" id="mail" placeholder=" " />
+              <svg class="icon form-icon"width="18px"
+                  height="18px">
+                <use
+                  href="./image/sprite.svg#icon-phone-black-18dp-1"
+                  
+                ></use>
+              </svg>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="mail">Почта</label>
+              <input
+                class="form-input"
+                type="email"
+                name="mail"
+                id="mail"
+                placeholder=" "
+              />
 
-            <svg class="icon">
-              <use
-                href="./image/sprite.svg#icon-email-black-18dp-1"
-                width="18px"
-                height="18px"
-              ></use>
-            </svg>
+              <svg class="icon form-icon" width="18px"
+                  height="18px">
+                <use
+                  href="./image/sprite.svg#icon-email-black-18dp-1"
+                ></use>
+              </svg>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="comment" >Комментарий</label>
+              <textarea
+                class="textarea"name="comment"rows="5"id="comment"placeholder="Введите текст"
+              >
+              </textarea>
+            </div>
+            <label>
+              <input class="checkbox-modal" type="checkbox" name="agree" value="agree" />
+              <span>Соглашаюсь с рассылкой и принимаю</span>
+              <a href="" class="link">Условия договора</a>
+            </label>
           </div>
-          <div class="form-field"></div>
-          <label for="comment">Комментарий</label>
-          <textarea
-            name="comment"
-            rows="5"
-            id="comment"
-            placeholder="Введите текст"
-          />
-
-          <input id="agree" name="agree" type="checkbox" value="" /><label
-            for="agree"
-          >
-            Соглашаюсь с рассылкой и принимаю
-            <span>Условия договора</span></label
-          >
           <button type="submit">Отправить</button>
         </form>
       </div>
