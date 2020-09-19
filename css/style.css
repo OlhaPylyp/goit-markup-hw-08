@@ -761,6 +761,7 @@ main */
   margin-bottom: 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color var(--main-transition);
 }
 
 .textarea::placeholder {
@@ -776,7 +777,7 @@ main */
   border-radius: 4px;
   cursor: pointer;
   line-height: 2.75;
-
+  transition: border-color var(--main-transition);
   outline-color: transparent;
 }
 /* стиль для иконок в модальной форме */
@@ -786,6 +787,7 @@ main */
   left: 12px;
   transform: translateY(-25%);
   fill: var(--title-color);
+  transition: fill var(--main-transition);
 }
 
 .form .link {
@@ -803,7 +805,13 @@ main */
   color: var(--text-color);
 }
 .checkbox {
-  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .chek-icon::before {
@@ -847,5 +855,7 @@ main */
   border-radius: 4px;
   transition: background-color var(--main-transition);
 }
-/* .checkbox::checked {
-} */
+.btn-submit:hover,
+.btn-submit:focus {
+  background-color: 188ce8;
+}
