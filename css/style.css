@@ -923,5 +923,5 @@ main */
   transition: background-color var(--main-transition);
 }
 .btn-form:focus {
-  background-color: 188ce8;
+  background-color: #188ce8;
 }
