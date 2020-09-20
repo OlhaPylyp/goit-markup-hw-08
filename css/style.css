@@ -507,6 +507,9 @@ main */
 /* ---------------колонка с соцсетями в футере----------------- */
 
 /* стили для заголовка футера*/
+.footer-social-container {
+  margin-right: 93px;
+}
 .footer-title {
   font-weight: bold;
   font-size: 14px;
@@ -566,6 +569,56 @@ main */
 .list-button .item:not(:last-child) {
   margin-right: 8px;
 }
+/* ------------------Стили для форм в футере */
+.foter-label .foter-form-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  /* align-items: center; */
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.foter-form-input {
+  margin-right: 12px;
+  padding: 15px 16px;
+  background-color: transparent;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  width: 358px;
+  outline-color: var(--akcent-color);
+  color: var(--white);
+}
+
+/* ---------стилизация иконки в кнопке батон-------- */
+.btn-footer {
+  display: flex;
+  align-items: center;
+
+  padding-left: 29px;
+  padding-right: 28px;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--white);
+  letter-spacing: 0.06em;
+
+  background: var(--akcent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.btn-footer::after {
+  content: "";
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../image/icon-send.svg);
+}
 
 /* position for button portfolio*/
 
@@ -573,7 +626,6 @@ main */
   padding: 6px 22px;
   color: var(--title-color);
   background: var(--gray-bcg-color);
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -694,7 +746,6 @@ main */
   top: 50%;
   left: 50%;
   min-width: 528px;
-  min-height: 581px;
 
   background: var(--white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -770,6 +821,10 @@ main */
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
+.textarea:focus {
+  outline-color: var(--akcent-color);
+}
+
 .form-input {
   padding-left: 42px;
   width: 100%;
@@ -777,15 +832,20 @@ main */
   border-radius: 4px;
   cursor: pointer;
   line-height: 2.75;
-  transition: border-color var(--main-transition);
+  transition: all var(--main-transition);
   outline-color: transparent;
+}
+.form-input:focus,
+.form-input:focus + .icon {
+  outline-color: var(--akcent-color);
+  fill: var(--akcent-color);
 }
 /* стиль для иконок в модальной форме */
 .form .icon {
   position: absolute;
   top: 50%;
   left: 12px;
-  transform: translateY(-25%);
+  /* transform: translateY(-25%); */
   fill: var(--title-color);
   transition: fill var(--main-transition);
 }
@@ -805,6 +865,7 @@ main */
   color: var(--text-color);
 }
 .checkbox {
+  position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -839,11 +900,13 @@ main */
   background-repeat: no-repeat;
 }
 /* -------Кнопка для формы в модальном окне----- */
-.btn-submit {
+.btn-form {
   display: flex;
-  margin: 0 auto;
-  min-width: 200px;
   padding: 10px 55px;
+  margin: 0px auto;
+  min-width: 200px;
+  align-items: center;
+  text-align: center;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
@@ -855,7 +918,6 @@ main */
   border-radius: 4px;
   transition: background-color var(--main-transition);
 }
-.btn-submit:hover,
-.btn-submit:focus {
+.btn-form:focus {
   background-color: 188ce8;
 }
