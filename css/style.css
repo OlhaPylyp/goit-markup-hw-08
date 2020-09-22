@@ -655,7 +655,7 @@ main */
   margin-bottom: 30px;
 
   border: 1px solid var(--border-portfolio);
-  transition: allvar(--trancision);
+  transition: all var(--trancision);
 }
 
 .list-service .item:nth-child(3n) {
