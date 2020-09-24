@@ -87,9 +87,13 @@ img {
   font-weight: 400;
 }
 .btn {
+  font-size: 16px;
   border-radius: 4px;
   border: none;
   outline: none;
+}
+.content-box {
+  width: calc((100% - 30px * 3) / 4);
 }
 
 /* hiden title */
@@ -205,7 +209,7 @@ img {
   content: "";
 }
 main */
-/*style fo poster section*/
+/*----------------------------------------------style fo hero section------------------------*/
 
 .hero {
   display: flex;
@@ -243,13 +247,13 @@ main */
   /* display: inline-block; */
   padding: 10px 32px;
 
-  font-size: 16px;
   line-height: 1.87;
 
   letter-spacing: 0.06em;
   background-color: var(--akcent-color);
   color: var(--white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
   text-decoration: none;
 }
 
@@ -259,8 +263,14 @@ main */
 }
 
 /* добавляем блоки для иконок сверху списка преимуществ с помощью псевдоелемента */
+.advantage__item {
+  margin-right: 30px;
+}
 
-.list-advantage > .item::before {
+.advantage__item:nth-child(4n) {
+  margin-right: 0;
+}
+.advantage__item::before {
   display: block;
   margin-bottom: 30px;
 
@@ -271,43 +281,30 @@ main */
   background-color: var(--gray-bcg-color);
   border-radius: 4px;
 }
-.icon-item::before {
-  padding: 25px 100px;
+.advantage__title {
+  text-transform: uppercase;
 }
+
+.advantage__text {
+  line-height: 1.7;
+}
+
 /* добавляем  иконки сверху списка преимуществ с помощью псевдоелемента */
-.icon-antena::before {
+.advantage__icon-antena::before {
   padding: 25px 100px;
   background-image: url(../image/antenna.svg);
 }
-.icon-clock::before {
+.advantage__icon-clock::before {
   padding: 25px 100px;
   background-image: url(../image/clock.svg);
 }
-.icon-diagram::before {
+.advantage__icon-diagram::before {
   padding: 25px 100px;
   background-image: url(../image/diagram.svg);
 }
-.icon-astronaut::before {
+.advantage__icon-astronaut::before {
   padding: 25px 100px;
   background-image: url(../image/astronaut.svg);
-}
-
-.list-advantage .item {
-  width: calc((100% - 30px * 3) / 4);
-  margin-right: 30px;
-}
-
-.list-advantage .item:nth-child(4n) {
-  margin-right: 0;
-}
-
-.list-advantage .title {
-  text-transform: uppercase;
-  list-style: none;
-}
-
-.list-advantage .text {
-  line-height: 1.7;
 }
 
 /*style for чем мы занимаемся*/
@@ -484,8 +481,6 @@ main */
   margin-bottom: 0px;
 }
 .adress .text {
-  margin: 0;
-
   color: var(--white);
   font-style: normal;
 }
