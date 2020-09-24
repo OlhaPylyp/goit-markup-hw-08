@@ -92,10 +92,6 @@ img {
   border: none;
   outline: none;
 }
-.content-box {
-  width: calc((100% - 30px * 3) / 4);
-}
-
 /* hiden title */
 .hiden-title {
   position: absolute;
@@ -264,6 +260,7 @@ main */
 
 /* добавляем блоки для иконок сверху списка преимуществ с помощью псевдоелемента */
 .advantage__item {
+  width: calc((100% - 30px * 3) / 4);
   margin-right: 30px;
 }
 
@@ -309,19 +306,19 @@ main */
 
 /*style for чем мы занимаемся*/
 
-.work-list .item:nth-child(3n) {
+.about__item:nth-child(3n) {
   margin-right: 0px;
 }
-.work-list .item {
+.about__item {
   width: calc((100% - 30px * 2) / 3);
   margin-right: 30px;
 }
 
 /* контейнер для рисунков, чтоб можно было позиционировать */
-.work-thumb {
+.about__thumb {
   position: relative;
 }
-.thumb-text {
+.about__thumb-text {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -339,10 +336,7 @@ main */
 .command {
   background: var(--gray-bcg-color);
 }
-.comand-list .item:nth-child(4n) {
-  margin-right: 0px;
-}
-.comand-list .item {
+.comand__item {
   width: calc((100% - 30px * 3) / 4);
   margin-right: 30px;
   background-color: var(--white);
@@ -350,21 +344,24 @@ main */
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-/* padding for comands name and profeccion */
-.comander-container {
-  padding: 30px 0 16px;
+.comand__item:nth-child(4n) {
+  margin-right: 0px;
 }
 
-.comand-list .title {
-  font-weight: 500;
+/* padding for comands name and profeccion */
+.comand-container {
+  padding: 30px 0 16px;
   font-size: 16px;
+
   line-height: 1.19;
+}
+
+.comand__title {
+  font-weight: 500;
   text-align: center;
 }
 
-.comand-list .text {
-  font-size: 16px;
-  line-height: 1.19;
+.comand__text {
   text-align: center;
 }
 /* style for social link in command */
@@ -375,12 +372,12 @@ main */
   display: flex;
   justify-content: center;
 }
-.social-item:not(:last-child) {
+.social__item:not(:last-child) {
   margin-right: 10px;
 }
 
 /* style  for link in sosial list */
-.social-link {
+.social__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -389,20 +386,20 @@ main */
   border-radius: 50%;
   transition: all var(--trancision);
 }
-.social-item .icon {
+.social__icon {
   width: 20px;
   height: 20px;
   fill: var(--social-icon);
   transition: fill var(--trancision);
 }
 /* еффект ховера для соц сетей фон */
-.social-link:hover,
-.social-link:focus {
+.social__link:hover,
+.social__link:focus {
   background: var(--akcent-color);
 }
 /* еффект ховера для соц сетей иконки */
-.social-link:hover .icon,
-.social-link:focus .icon {
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
   fill: var(--white);
 }
 /* еффекты для списка наши клиенты */
