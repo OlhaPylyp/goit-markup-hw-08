@@ -86,6 +86,11 @@ img {
   color: var(--text-color);
   font-weight: 400;
 }
+.btn {
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
 
 /* hiden title */
 .hiden-title {
@@ -202,7 +207,7 @@ img {
 main */
 /*style fo poster section*/
 
-.poster {
+.hero {
   display: flex;
   margin-right: auto;
   margin-left: auto;
@@ -223,7 +228,7 @@ main */
     url(../image/backgr-poster.jpg);
 }
 
-.main-title {
+.hero__title {
   margin-top: 0;
   margin-bottom: 30px;
 
@@ -234,7 +239,7 @@ main */
   text-transform: uppercase;
   color: var(--white);
 }
-.button-poster {
+.hero__button {
   /* display: inline-block; */
   padding: 10px 32px;
 
@@ -245,10 +250,6 @@ main */
   background-color: var(--akcent-color);
   color: var(--white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  outline: none;
-
   text-decoration: none;
 }
 
