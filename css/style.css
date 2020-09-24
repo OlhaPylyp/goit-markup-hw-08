@@ -405,7 +405,7 @@ main */
 /* еффекты для списка наши клиенты */
 /* выравнивает по центру */
 
-.client-item {
+.client__item {
   display: flex;
   justify-content: center;
 
@@ -416,31 +416,31 @@ main */
   border-radius: 4px;
   transition: var(--trancision);
 }
-.client-item:not(:last-child) {
+.client__item:not(:last-child) {
   /* убираем марджины у последнего елемента */
   margin-right: 30px;
 }
 
 /* выравниваем иконки по центру*/
-.client-item .link {
+.client__link {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 /* цвет для иконок */
-.client-item .icon {
+.client__icon {
   fill: var(--social-icon);
   transition: fill var(--trancision);
 }
 /* ховер для рамок*/
-.client-item:hover,
-.client-item:focus {
+.client__item:hover,
+.client__item:focus {
   border-color: var(--akcent-color);
 }
 /* ховер для иконок*/
-.client-item:hover .icon,
-.icon .client-item:focus .icon {
+.client__item:hover .client__icon,
+.client__item:focus .client__icon {
   fill: var(--akcent-color);
 }
 /*----------------footer---------------------------*/
