@@ -12,7 +12,7 @@
   --overlay: #c4c4c4;
   --social-icon: #afb1b8;
   --background: rgba(47, 48, 58, 0.4);
-  --trancision: 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  --trancision: 3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -37,17 +37,19 @@ img {
   max-width: 100%;
   height: auto;
 }
-.link {
-  text-decoration: none;
-}
 .list {
   list-style: none;
   padding: 0px;
   margin: 0px;
 }
-.item .link:hover,
-.item .link:focus,
-.item .link:active {
+.link {
+  text-decoration: none;
+  transition: all var(--trancision);
+}
+
+.link:hover,
+.link:focus,
+.link:active {
   color: var(--akcent-color);
   cursor: pointer;
 }
@@ -97,25 +99,24 @@ img {
   overflow: hidden;
 }
 /* ------------------------------------Header-------------------------------------- */
-.logo-web {
-  color: var(--akcent-color);
-
-  font-family: Raleway, sans-serif;
-}
 .logo {
-  margin-right: 93px;
   color: var(--logo2-color);
   text-decoration: none;
+  margin-right: 93px;
 
   font-family: Raleway, sans-serif;
   font-size: 26px;
   line-height: 1.2;
 }
-.page-header {
+.logo__web {
+  color: var(--akcent-color);
+}
+
+.header {
   padding: 25px 0;
   border-bottom: 1px solid var(--border-header);
 }
-.page-header .flexbox {
+.header__flexbox {
   align-items: center;
 }
 
@@ -124,32 +125,29 @@ img {
   display: flex;
   align-items: center;
 }
-.site-nav {
+.menu {
   display: flex;
   margin-left: 0px;
 }
-
-.site-nav .link {
+.menu__item:not(:last-child) {
+  margin-right: 50px;
+}
+.menu__link {
   padding: 32px 0;
-
   color: var(--title-color);
-
   cursor: pointer;
   font-weight: 500;
   letter-spacing: 0.02em;
-  transition: all var(--trancision);
 }
 
-.active {
+.menu__link--active {
   position: relative;
   padding: 32px 0;
   color: var(--akcent-color);
   text-decoration: none;
 }
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
-}
-.active::after {
+
+.menu__link--active::after {
   display: flex;
   position: absolute;
   margin-right: auto;
@@ -164,9 +162,9 @@ img {
   bottom: -2%;
 }
 
-/* adress header*/
-/*link style*/
-.site-adr {
+/* ----------------------adress header-----------------------*/
+
+.header-adr {
   align-items: center;
   margin-left: auto;
   letter-spacing: 0.02em;
@@ -174,28 +172,27 @@ img {
   border: none;
 }
 
-.site-adr .item:not(:last-child) {
+.header-adr__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.site-adr .link {
+.header-adr__link {
   display: inline-flex;
   align-items: center;
   font-weight: 500;
 
   letter-spacing: 0.02em;
   color: var(--text-color);
-  transition: all var(--trancision);
 }
 
 /* конвертик и телефон возле почты */
-.site-adr .icon {
+.header-adr__icon {
   margin-right: 10px;
   fill: var(--text-color);
   transition: fill var(--trancision);
 }
 
-.site-adr .item:hover .icon {
+.header-adr__item:hover .header-adr__icon {
   fill: var(--akcent-color);
 }
 
