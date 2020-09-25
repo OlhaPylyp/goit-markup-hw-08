@@ -252,18 +252,9 @@ main */
   text-transform: uppercase;
   color: var(--white);
 }
-.hero__button {
+.btn--hero {
   /* display: inline-block; */
   padding: 10px 32px;
-
-  line-height: 1.87;
-
-  letter-spacing: 0.06em;
-  background-color: var(--akcent-color);
-  color: var(--white);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  text-decoration: none;
 }
 
 /*style for advantage section*/
