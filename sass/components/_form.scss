@@ -6,8 +6,7 @@
 .form__title {
   text-align: center;
   margin-bottom: 12px;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font(20px, 1.15);
   color: $title-color;
 }
 .form-field {
@@ -20,14 +19,12 @@
   display: block;
   align-items: center;
   margin-bottom: 4px;
-  font-size: 12px;
-  line-height: 1.17;
+  @include font(12px, 1.17);
   letter-spacing: 0.01em;
   color: $text-color;
 }
 
 .form__textarea {
-  font-weight: 400;
   width: 100%;
   padding: 12px 16px;
   resize: none;
@@ -80,8 +77,7 @@
   text-align: center;
   margin-bottom: 30px;
   padding-left: 13px;
-  font-weight: 500;
-  line-height: 1.7;
+  @include font(14px, 1.7, 500);
   color: $text-color;
 }
 .checkbox {

@@ -6,20 +6,6 @@
   font-style: normal;
 }
 
-/* @font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/open_sans/opensans-regular-webfont.woff2") format("woff2"),
-    url("../fonts/open_sans/opensans-regular-webfont.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/open_sans/opensans-semibold-webfont.woff2") format("woff2"),
-    url("../fonts/open_sans/opensans-semibold-webfont.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-} */
 body {
   color: #212121;
   background-color: #ffffff;
@@ -97,6 +83,7 @@ img {
   margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -144,6 +131,8 @@ img {
 .header-adr__link {
   display: inline-flex;
   align-items: center;
+  font-size: 14px;
+  line-height: 1.2;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #757575;
@@ -172,6 +161,7 @@ img {
   font-family: Raleway, sans-serif;
   font-size: 26px;
   line-height: 1.2;
+  font-weight: 700;
 }
 
 .logo-web {
@@ -191,6 +181,8 @@ img {
   padding: 32px 0;
   color: #212121;
   cursor: pointer;
+  font-size: 14px;
+  line-height: 1.12;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
@@ -219,6 +211,8 @@ img {
 
 .hero {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-right: auto;
   margin-left: auto;
   max-width: 1600px;
@@ -226,8 +220,6 @@ img {
   align-items: center;
   background-repeat: no-repeat;
   background-position: center;
-  flex-direction: column;
-  justify-content: center;
   background-size: cover;
   background-color: #c4c4c4;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/backgr-poster.jpg);
@@ -236,9 +228,9 @@ img {
 .hero__title {
   margin-top: 0;
   margin-bottom: 30px;
-  font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+  font-weight: 900;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
@@ -462,9 +454,10 @@ img {
   margin-bottom: 20px;
   color: #ffffff;
   text-decoration: none;
-  font-family: Raleway, sans-serif;
   font-size: 26px;
   line-height: 1.2;
+  font-weight: 700;
+  font-family: Raleway, sans-serif;
 }
 
 .asdress {
@@ -498,12 +491,12 @@ img {
 }
 
 .footer__title {
-  font-weight: bold;
-  font-size: 14px;
   margin-top: 0;
   margin-bottom: 20px;
-  line-height: 1.4;
   color: #ffffff;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -532,6 +525,7 @@ img {
 .footer-form__input::placeholder {
   font-size: 16px;
   line-height: 1.25;
+  font-weight: 700;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -573,6 +567,7 @@ img {
   margin-bottom: 12px;
   font-size: 20px;
   line-height: 1.15;
+  font-weight: 700;
   color: #212121;
 }
 
@@ -589,12 +584,12 @@ img {
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
+  font-weight: 700;
   letter-spacing: 0.01em;
   color: #757575;
 }
 
 .form__textarea {
-  font-weight: 400;
   width: 100%;
   padding: 12px 16px;
   resize: none;
@@ -650,8 +645,9 @@ img {
   text-align: center;
   margin-bottom: 30px;
   padding-left: 13px;
-  font-weight: 500;
+  font-size: 14px;
   line-height: 1.7;
+  font-weight: 500;
   color: #757575;
 }
 
