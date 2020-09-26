@@ -1,0 +1,26 @@
+.about__item:nth-child(3n) {
+  margin-right: 0px;
+}
+.about__item {
+  width: calc((100% - 30px * 2) / 3);
+  margin-right: 30px;
+}
+
+/* контейнер для рисунков, чтоб можно было позиционировать */
+.about__thumb {
+  position: relative;
+}
+.about__thumb-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 27px;
+  margin: 0;
+  text-align: center;
+  height: 70px;
+  width: 100%;
+
+  color: $white;
+  background: rgba(47, 48, 58, 0.8);
+  text-transform: uppercase;
+}

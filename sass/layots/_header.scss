@@ -1,0 +1,39 @@
+.page-header {
+  padding: 25px 0;
+  border-bottom: 1px solid $border-header;
+  align-items: center;
+}
+
+/* ----------------------adress header-----------------------*/
+
+.header-adr {
+  align-items: center;
+  margin-left: auto;
+  letter-spacing: 0.02em;
+
+  border: none;
+}
+
+.header-adr__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header-adr__link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+
+  letter-spacing: 0.02em;
+  color: $text-color;
+}
+
+/* конвертик и телефон возле почты */
+.header-adr__icon {
+  margin-right: 10px;
+  fill: $text-color;
+  transition: fill $trancision;
+}
+
+.header-adr__item:hover .header-adr__icon {
+  fill: $akcent-color;
+}

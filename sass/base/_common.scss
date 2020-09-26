@@ -1,0 +1,64 @@
+body {
+  color: $title-color;
+  background-color: $white;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.link {
+  text-decoration: none;
+  transition: all $trancision;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  color: $akcent-color;
+  cursor: pointer;
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.text {
+  margin: 0;
+  color: $text-color;
+  font-weight: 400;
+}
+
+.hiden-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
