@@ -12,27 +12,27 @@
   letter-spacing: 0.02em;
 
   border: none;
-}
 
-.header-adr__item:not(:last-child) {
-  margin-right: 30px;
-}
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
 
-.header-adr__link {
-  display: inline-flex;
-  align-items: center;
-  @include font(14px, 1.2, 500);
-  letter-spacing: 0.02em;
-  color: $text-color;
-}
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    @include font(14px, 1.2, 500);
+    letter-spacing: 0.02em;
+    color: $text-color;
+  }
 
-/* конвертик и телефон возле почты */
-.header-adr__icon {
-  margin-right: 10px;
-  fill: $text-color;
-  transition: fill $trancision;
-}
+  /* конвертик и телефон возле почты */
+  &__icon {
+    margin-right: 10px;
+    fill: $text-color;
+    transition: fill $trancision;
+  }
 
-.header-adr__item:hover .header-adr__icon {
-  fill: $akcent-color;
+  &__item:hover .header-adr__icon {
+    fill: $akcent-color;
+  }
 }

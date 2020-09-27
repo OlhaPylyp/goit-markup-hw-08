@@ -1,49 +1,49 @@
 .advantage {
   padding-bottom: 0;
-}
 
-/* добавляем блоки для иконок сверху списка преимуществ с помощью псевдоелемента */
-.advantage__item {
-  width: calc((100% - 30px * 3) / 4);
-  margin-right: 30px;
-}
+  /* добавляем блоки для иконок сверху списка преимуществ с помощью псевдоелемента */
+  &__item {
+    width: calc((100% - 30px * 3) / 4);
+    margin-right: 30px;
+  }
 
-.advantage__item:nth-child(4n) {
-  margin-right: 0;
-}
-.advantage__item::before {
-  display: block;
-  margin-bottom: 30px;
+  &__item:nth-child(4n) {
+    margin-right: 0;
+  }
+  &__item::before {
+    display: block;
+    margin-bottom: 30px;
 
-  content: "";
-  height: 120px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: $gray-bcg-color;
-  border-radius: 4px;
-}
-.advantage__title {
-  text-transform: uppercase;
-}
+    content: "";
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $gray-bcg-color;
+    border-radius: 4px;
+  }
+  &__title {
+    text-transform: uppercase;
+  }
 
-.advantage__text {
-  line-height: 1.7;
-}
+  &__text {
+    line-height: 1.7;
+  }
 
-/* добавляем  иконки сверху списка преимуществ с помощью псевдоелемента */
-.advantage__icon-antena::before {
-  padding: 25px 100px;
-  background-image: url(../image/antenna.svg);
-}
-.advantage__icon-clock::before {
-  padding: 25px 100px;
-  background-image: url(../image/clock.svg);
-}
-.advantage__icon-diagram::before {
-  padding: 25px 100px;
-  background-image: url(../image/diagram.svg);
-}
-.advantage__icon-astronaut::before {
-  padding: 25px 100px;
-  background-image: url(../image/astronaut.svg);
+  /* добавляем  иконки сверху списка преимуществ с помощью псевдоелемента */
+  &_icon-antena::before {
+    padding: 25px 100px;
+    background-image: url(../image/antenna.svg);
+  }
+  &__icon-clock::before {
+    padding: 25px 100px;
+    background-image: url(../image/clock.svg);
+  }
+  &__icon-diagram::before {
+    padding: 25px 100px;
+    background-image: url(../image/diagram.svg);
+  }
+  &__icon-astronaut::before {
+    padding: 25px 100px;
+    background-image: url(../image/astronaut.svg);
+  }
 }

@@ -1,36 +1,36 @@
 .menu {
   display: flex;
   margin-left: 0px;
-}
-.menu__item:not(:last-child) {
-  margin-right: 50px;
-}
-.menu__link {
-  padding: 32px 0;
-  color: $title-color;
-  cursor: pointer;
-  @include font(14px, 1.12, 500);
-  letter-spacing: 0.02em;
-}
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  &__link {
+    padding: 32px 0;
+    color: $title-color;
+    cursor: pointer;
+    @include font(14px, 1.12, 500);
+    letter-spacing: 0.02em;
+  }
 
-.menu__link--active {
-  position: relative;
-  padding: 32px 0;
-  color: $akcent-color;
-  text-decoration: none;
-}
+  &__link--active {
+    position: relative;
+    padding: 32px 0;
+    color: $akcent-color;
+    text-decoration: none;
+  }
 
-.menu__link--active::after {
-  display: flex;
-  position: absolute;
-  margin-right: auto;
-  margin-left: auto;
-  content: "";
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: $akcent-color;
-  bottom: -2%;
+  &__link--active::after {
+    display: flex;
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $akcent-color;
+    bottom: -2%;
+  }
 }

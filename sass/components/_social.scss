@@ -4,34 +4,33 @@
 .social {
   display: flex;
   justify-content: center;
-}
-.social__item:not(:last-child) {
-  margin-right: 10px;
-}
 
-/* style  for link in sosial list */
-.social__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  transition: all $trancision;
-}
-.social__icon {
-  width: 20px;
-  height: 20px;
-  fill: $social-icon;
-  transition: fill $trancision;
-}
-/* еффект ховера для соц сетей фон */
-.social__link:hover,
-.social__link:focus {
-  background: $akcent-color;
-}
-/* еффект ховера для соц сетей иконки */
-.social__link:hover .social__icon,
-.social__link:focus .social__icon {
-  fill: $white;
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: all $trancision;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: $social-icon;
+    transition: fill $trancision;
+  }
+  &__link:hover,
+  &__link:focus {
+    background: $akcent-color;
+  }
+  /* еффект ховера для соц сетей иконки */
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: $white;
+  }
 }

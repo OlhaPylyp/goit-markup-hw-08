@@ -30,14 +30,13 @@
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform $trancision;
-}
 
-/* стиль иконки */
-.modal__icon {
-  width: 18px;
-  height: 18px;
-  fill: $logo2-color;
-  transition: fill $trancision;
+  &__icon {
+    width: 18px;
+    height: 18px;
+    fill: $logo2-color;
+    transition: fill $trancision;
+  }
 }
 .bt-close {
   position: absolute;
@@ -53,12 +52,13 @@
   text-align: center;
   cursor: pointer;
   outline: none;
-}
-.bt-close:hover,
-.bt-close:focus {
-  fill: $akcent-color;
-}
-.bt-close:hover,
-.bt-close:focus {
-  fill: $akcent-color;
+
+  &:hover,
+  &:focus {
+    fill: $akcent-color;
+  }
+  &:hover,
+  &:focus {
+    fill: $akcent-color;
+  }
 }

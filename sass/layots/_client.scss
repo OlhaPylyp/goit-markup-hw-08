@@ -16,17 +16,13 @@
   &:focus {
     border-color: $akcent-color;
   }
+  &:hover .client__icon,
+  &:focus .client__icon {
+    fill: $akcent-color;
+  }
 }
 
-/* цвет для иконок */
 .client__icon {
   fill: $social-icon;
   transition: fill $trancision;
-}
-/* ховер для рамок*/
-
-/* ховер для иконок*/
-.client__item:hover .client__icon,
-.client__item:focus .client__icon {
-  fill: $akcent-color;
 }

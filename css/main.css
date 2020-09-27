@@ -1,11 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/open_sans/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/open_sans/opensans-regular-webfont.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
 body {
   color: #212121;
   background-color: #ffffff;
@@ -122,6 +115,7 @@ img {
   margin-left: auto;
   letter-spacing: 0.02em;
   border: none;
+  /* конвертик и телефон возле почты */
 }
 
 .header-adr__item:not(:last-child) {
@@ -138,7 +132,6 @@ img {
   color: #757575;
 }
 
-/* конвертик и телефон возле почты */
 .header-adr__icon {
   margin-right: 10px;
   fill: #757575;
@@ -243,9 +236,10 @@ img {
 
 .advantage {
   padding-bottom: 0;
+  /* добавляем блоки для иконок сверху списка преимуществ с помощью псевдоелемента */
+  /* добавляем  иконки сверху списка преимуществ с помощью псевдоелемента */
 }
 
-/* добавляем блоки для иконок сверху списка преимуществ с помощью псевдоелемента */
 .advantage__item {
   width: calc((100% - 30px * 3) / 4);
   margin-right: 30px;
@@ -274,8 +268,7 @@ img {
   line-height: 1.7;
 }
 
-/* добавляем  иконки сверху списка преимуществ с помощью псевдоелемента */
-.advantage__icon-antena::before {
+.advantage_icon-antena::before {
   padding: 25px 100px;
   background-image: url(../image/antenna.svg);
 }
@@ -374,17 +367,14 @@ img {
   border-color: #2196f3;
 }
 
-/* цвет для иконок */
-.client__icon {
-  fill: #afb1b8;
-  transition: fill 3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ховер для рамок*/
-/* ховер для иконок*/
 .client__item:hover .client__icon,
 .client__item:focus .client__icon {
   fill: #2196f3;
+}
+
+.client__icon {
+  fill: #afb1b8;
+  transition: fill 3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-container {
@@ -394,13 +384,13 @@ img {
 .social {
   display: flex;
   justify-content: center;
+  /* еффект ховера для соц сетей иконки */
 }
 
 .social__item:not(:last-child) {
   margin-right: 10px;
 }
 
-/* style  for link in sosial list */
 .social__link {
   display: flex;
   justify-content: center;
@@ -418,20 +408,15 @@ img {
   transition: fill 3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* еффект ховера для соц сетей фон */
-.social__link:hover,
-.social__link:focus {
+.social__link:hover, .social__link:focus {
   background: #2196f3;
 }
 
-/* еффект ховера для соц сетей иконки */
 .social__link:hover .social__icon,
 .social__link:focus .social__icon {
   fill: #ffffff;
 }
 
-/*----------------footer---------------------------*/
-/*позиционирование двох дивов*/
 .page-footer {
   background: #2f303a;
   font-weight: 400;
@@ -560,6 +545,7 @@ img {
 .form {
   display: flex;
   flex-direction: column;
+  /* стиль для иконок в модальной форме */
 }
 
 .form__title {
@@ -617,7 +603,6 @@ img {
   outline: none;
 }
 
-/* стиль для иконок в модальной форме */
 .form__icon {
   position: absolute;
   top: 50%;
@@ -627,9 +612,7 @@ img {
   transition: fill 3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form__input:focus ~ .form__icon,
-.form__input:focus,
-.form__textarea:focus {
+.form__input:focus ~ .form__icon, .form__input:focus, .form__textarea:focus {
   border-color: #2196f3;
   fill: #2196f3;
 }
@@ -728,7 +711,6 @@ img {
   transition: transform 3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* стиль иконки */
 .modal__icon {
   width: 18px;
   height: 18px;
@@ -750,13 +732,11 @@ img {
   outline: none;
 }
 
-.bt-close:hover,
-.bt-close:focus {
+.bt-close:hover, .bt-close:focus {
   fill: #2196f3;
 }
 
-.bt-close:hover,
-.bt-close:focus {
+.bt-close:hover, .bt-close:focus {
   fill: #2196f3;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,75 +1,75 @@
 .form {
   display: flex;
   flex-direction: column;
-}
 
-.form__title {
-  text-align: center;
-  margin-bottom: 12px;
-  @include font(20px, 1.15);
-  color: $title-color;
-}
-.form-field {
-  position: relative;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  outline: none;
-}
-.form__label {
-  display: block;
-  align-items: center;
-  margin-bottom: 4px;
-  @include font(12px, 1.17);
-  letter-spacing: 0.01em;
-  color: $text-color;
-}
+  &__title {
+    text-align: center;
+    margin-bottom: 12px;
+    @include font(20px, 1.15);
+    color: $title-color;
+  }
+  &-field {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    outline: none;
+  }
+  &__label {
+    display: block;
+    align-items: center;
+    margin-bottom: 4px;
+    @include font(12px, 1.17);
+    letter-spacing: 0.01em;
+    color: $text-color;
+  }
 
-.form__textarea {
-  width: 100%;
-  padding: 12px 16px;
-  resize: none;
-  margin-bottom: 20px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  &__textarea {
+    width: 100%;
+    padding: 12px 16px;
+    resize: none;
+    margin-bottom: 20px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
 
-  border-radius: 4px;
-  transition: border-color $trancision;
-  outline: none;
-}
-.form__textarea::placeholder {
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
+    border-radius: 4px;
+    transition: border-color $trancision;
+    outline: none;
+  }
+  &__textarea::placeholder {
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 
-.form__input {
-  padding-left: 42px;
-  width: 100%;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  cursor: pointer;
-  line-height: 2.75;
-  transition: all $trancision;
-  outline: none;
-}
+  &__input {
+    padding-left: 42px;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 2.75;
+    transition: all $trancision;
+    outline: none;
+  }
 
-/* стиль для иконок в модальной форме */
-.form__icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  /* transform: translateY(-25%); */
-  fill: $title-color;
-  transition: fill $trancision;
-}
-.form__input:focus ~ .form__icon,
-.form__input:focus,
-.form__textarea:focus {
-  border-color: $akcent-color;
-  fill: $akcent-color;
-}
-.form__link {
-  text-decoration: underline;
-  color: $akcent-color;
+  /* стиль для иконок в модальной форме */
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    /* transform: translateY(-25%); */
+    fill: $title-color;
+    transition: fill $trancision;
+  }
+  &__input:focus ~ .form__icon,
+  &__input:focus,
+  &__textarea:focus {
+    border-color: $akcent-color;
+    fill: $akcent-color;
+  }
+  &__link {
+    text-decoration: underline;
+    color: $akcent-color;
+  }
 }
 /* ------------Стиль для чек бокса------------ */
 .chek {

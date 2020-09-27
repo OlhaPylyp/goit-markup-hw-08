@@ -1,11 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/open_sans/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/open_sans/opensans-regular-webfont.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
 body {
   color: #212121;
   background-color: #ffffff;
@@ -122,6 +115,7 @@ img {
   margin-left: auto;
   letter-spacing: 0.02em;
   border: none;
+  /* конвертик и телефон возле почты */
 }
 
 .header-adr__item:not(:last-child) {
@@ -138,7 +132,6 @@ img {
   color: #757575;
 }
 
-/* конвертик и телефон возле почты */
 .header-adr__icon {
   margin-right: 10px;
   fill: #757575;
@@ -232,8 +225,7 @@ img {
   border: none;
 }
 
-.portfolio__btn:hover,
-.portfolio__btn:focus {
+.portfolio__btn:hover, .portfolio__btn:focus {
   color: #ffffff;
   background: #2196f3;
   cursor: pointer;
@@ -323,13 +315,13 @@ img {
 .social {
   display: flex;
   justify-content: center;
+  /* еффект ховера для соц сетей иконки */
 }
 
 .social__item:not(:last-child) {
   margin-right: 10px;
 }
 
-/* style  for link in sosial list */
 .social__link {
   display: flex;
   justify-content: center;
@@ -347,20 +339,15 @@ img {
   transition: fill 3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* еффект ховера для соц сетей фон */
-.social__link:hover,
-.social__link:focus {
+.social__link:hover, .social__link:focus {
   background: #2196f3;
 }
 
-/* еффект ховера для соц сетей иконки */
 .social__link:hover .social__icon,
 .social__link:focus .social__icon {
   fill: #ffffff;
 }
 
-/*----------------footer---------------------------*/
-/*позиционирование двох дивов*/
 .page-footer {
   background: #2f303a;
   font-weight: 400;
