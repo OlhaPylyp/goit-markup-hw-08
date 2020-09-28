@@ -1,10 +1,10 @@
 body {
   color: $title-color;
   background-color: $white;
-  @include font(14px, 1.14);
+  @include font($main-font-size, $main-line-height);
   font-family: Roboto, sans-serif;
   font-style: normal;
-  letter-spacing: 0.03em;
+  letter-spacing: $main-letter_spacing;
 }
 .container {
   width: 1200px;

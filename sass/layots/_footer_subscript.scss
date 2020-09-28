@@ -1,5 +1,5 @@
 .footer-form__input::placeholder {
-  @include font(16px, 1.25);
+  @include font($btn-font-size, 1.25);
   color: rgba(255, 255, 255, 0.6);
 }
 .footer-form__input {

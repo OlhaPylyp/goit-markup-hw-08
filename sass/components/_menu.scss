@@ -8,8 +8,8 @@
     padding: 32px 0;
     color: $title-color;
     cursor: pointer;
-    @include font(14px, 1.12, 500);
-    letter-spacing: 0.02em;
+    @include font($main-font-size, 1.12, $sec-font-weight);
+    letter-spacing: $secondary-letter_spacing;
   }
 
   &__link--active {

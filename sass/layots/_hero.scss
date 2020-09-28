@@ -19,8 +19,8 @@
 .hero__title {
   margin-top: 0;
   margin-bottom: 30px;
-  @include font(44px, 1.36, 900);
-  letter-spacing: 0.06em;
+  @include font(44px, $hero-line-height, 900);
+  letter-spacing: $btn_spacing;
   text-transform: uppercase;
   color: $white;
 }

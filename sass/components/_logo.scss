@@ -4,7 +4,7 @@
   margin-right: 93px;
 
   font-family: Raleway, sans-serif;
-  @include font(26px, 1.2);
+  @include font(26px, $link-line-height);
 }
 .logo-web {
   color: $akcent-color;
