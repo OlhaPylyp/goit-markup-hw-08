@@ -33,4 +33,15 @@
     background-color: $akcent-color;
     bottom: -2%;
   }
+  @include for-size(mobile) {
+    width: 480px;
+    display: none;
+  }
+  @include for-size(tablet) {
+    width: 768px;
+  }
+
+  @include for-size(desktop) {
+    width: 1280px;
+  }
 }

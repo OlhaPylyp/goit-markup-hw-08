@@ -32,8 +32,9 @@
   &__item:hover .header-adr__icon {
     fill: $akcent-color;
   }
+
   @include for-size(mobile) {
-    width: 480px;
+    width: 480x;
     display: none;
   }
   @include for-size(tablet) {

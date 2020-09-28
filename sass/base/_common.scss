@@ -2,7 +2,7 @@ body {
   color: $title-color;
   background-color: $white;
   @include font($main-font-size, $main-line-height);
-  font-family: Roboto, sans-serif;
+  font-family: $main-font-family;
   font-style: normal;
   letter-spacing: $main-letter_spacing;
 }
@@ -31,6 +31,17 @@ img {
   list-style: none;
   padding: 0px;
   margin: 0px;
+  @include for-size(mobile) {
+    width: 480px;
+    display: none;
+  }
+  @include for-size(tablet) {
+    width: 768px;
+  }
+
+  @include for-size(desktop) {
+    width: 1280px;
+  }
 }
 .link {
   text-decoration: none;
