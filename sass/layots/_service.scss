@@ -26,7 +26,7 @@
   color: $title-color;
 }
 .servise__text {
-  @include font($btn-font-size, $text-sec-line-height, $sec-font-weigt);
+  @include font($btn-font-size, $text-sec-line-height, $sec-font-weight);
 }
 
 /* Ховер и фокус для списка по сервису */

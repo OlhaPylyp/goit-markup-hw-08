@@ -20,9 +20,6 @@
   &__link {
     display: inline-flex;
     align-items: center;
-    @include font($main-font-size, $link-line-height, $sec-font-weight);
-    letter-spacing: $secondary-letter_spacing;
-    color: $text-color;
   }
 
   /* конвертик и телефон возле почты */
@@ -34,5 +31,16 @@
 
   &__item:hover .header-adr__icon {
     fill: $akcent-color;
+  }
+  @include for-size(mobile) {
+    width: 480px;
+    display: none;
+  }
+  @include for-size(tablet) {
+    width: 768px;
+  }
+
+  @include for-size(desktop) {
+    width: 1280px;
   }
 }
