@@ -1,10 +1,10 @@
 .advantage {
   padding-bottom: 0;
 
-  /* добавляем блоки для иконок сверху списка преимуществ с помощью псевдоелемента */
   &__item {
-    width: calc((100% - 30px * 3) / 4);
-    margin-right: 30px;
+    text-align: center;
+    // width: calc((100% - 30px * 3) / 4);
+    // margin-right: 30px;
   }
 
   &__item:nth-child(4n) {
@@ -27,10 +27,11 @@
 
   &__text {
     line-height: $text-line-height;
+    text-align: left;
   }
 
   /* добавляем  иконки сверху списка преимуществ с помощью псевдоелемента */
-  &_icon-antena::before {
+  &__icon-antena::before {
     padding: 25px 100px;
     background-image: url(../image/antenna.svg);
   }

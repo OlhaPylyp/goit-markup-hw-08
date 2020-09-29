@@ -1,10 +1,10 @@
 .logo {
-  color: $logo2-color;
   text-decoration: none;
   margin-right: 93px;
+  color: $title-color;
 
   font-family: $sec-font-family;
-  @include font(26px, $link-line-height);
+  @include font(24px, $title-line-height);
 }
 .logo-web {
   color: $akcent-color;

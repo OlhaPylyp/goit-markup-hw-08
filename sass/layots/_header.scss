@@ -1,5 +1,7 @@
 .page-header {
-  padding: 25px 0;
+  padding: 16px 0;
+  line-height: $title-line-height;
+
   border-bottom: 1px solid $border-header;
   align-items: center;
 }
@@ -7,41 +9,72 @@
 /* ----------------------adress header-----------------------*/
 
 .header-adr {
-  align-items: center;
-  margin-left: auto;
-  letter-spacing: $secondary-letter_spacing;
-
-  border: none;
-
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
-
-  &__link {
-    display: inline-flex;
-    align-items: center;
-  }
-
-  /* конвертик и телефон возле почты */
-  &__icon {
-    margin-right: 10px;
-    fill: $text-color;
-    transition: fill $trancision;
-  }
-
-  &__item:hover .header-adr__icon {
-    fill: $akcent-color;
-  }
-
-  @include for-size(mobile) {
-    width: 480x;
+  @include for-size(tablet-only) {
     display: none;
-  }
-  @include for-size(tablet) {
-    width: 768px;
+    background-color: blue;
   }
 
+  @include for-size(tablet) {
+    display: block;
+    background-color: red;
+    align-items: center;
+    margin-left: auto;
+    letter-spacing: $secondary-letter_spacing;
+    border: none;
+    &__item {
+      font-size: $label-font-size;
+    }
+    &__item:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    &__link {
+      align-items: center;
+      color: $text-color;
+    }
+
+    /* конвертик и телефон возле почты */
+    &__icon {
+      margin-right: 8px;
+      fill: $text-color;
+      transition: fill $trancision;
+      width: 10px;
+      height: 14px;
+    }
+
+    &__item:hover .header-adr__icon {
+      fill: $akcent-color;
+    }
+  }
   @include for-size(desktop) {
-    width: 1280px;
+    background-color: violet;
+
+    align-items: center;
+    margin-left: auto;
+    letter-spacing: $secondary-letter_spacing;
+    border: none;
+
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &__link {
+      display: inline-flex;
+      align-items: center;
+      color: $text-color;
+    }
+
+    /* конвертик и телефон возле почты */
+    &__icon {
+      margin-right: 10px;
+      fill: $text-color;
+      transition: fill $trancision;
+      width: 10px;
+      height: 16px;
+    }
+
+    &__item:hover .header-adr__icon {
+      fill: $akcent-color;
+    }
   }
 }

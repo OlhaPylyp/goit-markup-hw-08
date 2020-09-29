@@ -1,11 +1,12 @@
 .hero {
+  outline-color: red;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   align-items: center;
   background-repeat: no-repeat;
   background-position: center;
@@ -14,12 +15,19 @@
   background-color: $overlay;
   background-image: linear-gradient(to right, $background, $background),
     url(../image/backgr-poster.jpg);
+  @include for-size(tablet) {
+    max-width: 768px;
+  }
+  @include for-size(desktop) {
+    max-width: 1600px;
+    height: 600px;
+  }
 }
 
 .hero__title {
   margin-top: 0;
   margin-bottom: 30px;
-  @include font(44px, $hero-line-height, 900);
+  @include font(26px, $hero-line-height, 900);
   letter-spacing: $btn-letter_spacing;
   text-transform: uppercase;
   color: $white;

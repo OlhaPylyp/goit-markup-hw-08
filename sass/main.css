@@ -50,7 +50,6 @@ img {
 @media (min-width: 480px) {
   .list {
     width: 480px;
-    display: none;
   }
 }
 
@@ -84,7 +83,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .title {
@@ -128,8 +127,8 @@ img {
   margin: 0px auto;
   min-width: 200px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   font-size: 16px;
   line-height: 1.87;
@@ -140,7 +139,7 @@ img {
   color: #ffffff;
   background-color: #2196f3;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -154,15 +153,15 @@ img {
   padding: 25px 0;
   border-bottom: 1px solid #ececec;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /* ----------------------adress header-----------------------*/
 .header-adr {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-left: auto;
   letter-spacing: 0.02em;
   border: none;
@@ -178,8 +177,8 @@ img {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .header-adr__icon {
@@ -193,32 +192,13 @@ img {
   fill: #2196f3;
 }
 
-@media (min-width: 480px) {
-  .header-adr {
-    width: 480x;
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .header-adr {
-    width: 768px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .header-adr {
-    width: 1280px;
-  }
-}
-
 .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .logo {
@@ -283,7 +263,6 @@ img {
 @media (min-width: 480px) {
   .menu {
     width: 480px;
-    display: none;
   }
 }
 
@@ -305,24 +284,36 @@ img {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-right: auto;
   margin-left: auto;
   max-width: 1600px;
   height: 600px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #c4c4c4;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/backgr-poster.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/backgr-poster.jpg);
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(47, 48, 58, 0.4)),
+      to(rgba(47, 48, 58, 0.4))
+    ),
+    url(../image/backgr-poster.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../image/backgr-poster.jpg);
 }
 
 .hero__title {
@@ -343,7 +334,6 @@ img {
 
 .advantage {
   padding-bottom: 0;
-  /* добавляем блоки для иконок сверху списка преимуществ с помощью псевдоелемента */
   /* добавляем  иконки сверху списка преимуществ с помощью псевдоелемента */
 }
 
@@ -375,7 +365,7 @@ img {
   line-height: 1.7;
 }
 
-.advantage_icon-antena::before {
+.advantage__icon-antena::before {
   padding: 25px 100px;
   background-image: url(../image/antenna.svg);
 }
@@ -431,8 +421,10 @@ img {
   width: calc((100% - 30px * 3) / 4);
   margin-right: 30px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -458,11 +450,11 @@ img {
 
 .client__item {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: calc((100% - 30px * 5) / 6);
   height: 90px;
   border: 1px solid #afb1b8;
@@ -476,7 +468,8 @@ img {
   margin-right: 30px;
 }
 
-.client__item:hover, .client__item:focus {
+.client__item:hover,
+.client__item:focus {
   border-color: #2196f3;
 }
 
@@ -500,8 +493,8 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   /* еффект ховера для соц сетей иконки */
 }
 
@@ -514,11 +507,11 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -534,7 +527,8 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social__link:hover, .social__link:focus {
+.social__link:hover,
+.social__link:focus {
   background: #2196f3;
 }
 
@@ -554,8 +548,8 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 /* описываем контейнер контактов в футере, задаю верхний и нижний падинги*/
@@ -578,8 +572,8 @@ img {
 .asdress {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .adress__link {
@@ -678,7 +672,7 @@ img {
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   width: 358px;
   outline-color: #2196f3;
@@ -706,8 +700,8 @@ img {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   /* стиль для иконок в модальной форме */
 }
 
@@ -730,8 +724,8 @@ img {
 .form__label {
   display: block;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
@@ -798,7 +792,9 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form__input:focus ~ .form__icon, .form__input:focus, .form__textarea:focus {
+.form__input:focus ~ .form__icon,
+.form__input:focus,
+.form__textarea:focus {
   border-color: #2196f3;
   fill: #2196f3;
 }
@@ -888,7 +884,7 @@ img {
 
 .is-hidden.modal {
   -webkit-transform: translate(-50%, -50%) scale(0.5);
-          transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.5);
 }
 
 .modal {
@@ -898,15 +894,18 @@ img {
   left: 50%;
   min-width: 528px;
   background: #ffffff;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__icon {
@@ -931,11 +930,13 @@ img {
   outline: none;
 }
 
-.bt-close:hover, .bt-close:focus {
+.bt-close:hover,
+.bt-close:focus {
   fill: #2196f3;
 }
 
-.bt-close:hover, .bt-close:focus {
+.bt-close:hover,
+.bt-close:focus {
   fill: #2196f3;
 }
 /*# sourceMappingURL=main.css.map */
