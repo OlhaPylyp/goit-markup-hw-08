@@ -1,4 +1,15 @@
 @charset "UTF-8";
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  outline: 2px solid red;
+}
+
 body {
   color: #212121;
   background-color: #ffffff;
@@ -8,7 +19,6 @@ body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   letter-spacing: 0.03em;
-  outline-color: green;
 }
 
 .container {
@@ -110,8 +120,8 @@ img {
 
 .section-title {
   margin-top: 0px;
-  margin-bottom: 50px;
-  font-size: 36px;
+  margin-bottom: 30px;
+  font-size: 28px;
   line-height: 1.17;
   font-weight: 700;
   text-align: center;
@@ -421,10 +431,8 @@ img {
   background-color: #ffffff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-
-.comand__item:nth-child(4n) {
-  margin-right: 0px;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 /* padding for comands name and profeccion */
@@ -432,6 +440,11 @@ img {
   padding: 30px 0 16px;
   font-size: 16px;
   line-height: 1.19;
+}
+
+@media (min-width: 1200px) {
+  width: calc((100% - 30px * 3) / 4);
+  margin-right: 30px;
 }
 
 .comand__title {
@@ -444,26 +457,26 @@ img {
 }
 
 .client__item {
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: calc((100% - 30px * 5) / 6);
+  margin-right: 30px;
+  margin-left: 0;
+  margin-bottom: 30px;
+  width: calc((100% - 30px * 1) / 2);
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client__item:not(:last-child) {
-  /* убираем марджины у последнего елемента */
-  margin-right: 30px;
-}
-
-.client__item:hover, .client__item:focus {
+.client__item :hover,
+.client__item :focus {
   border-color: #2196f3;
 }
 
-.client__item:hover .client__icon,
-.client__item:focus .client__icon {
+.client__item :hover .client__icon,
+.client__item :focus .client__icon {
   fill: #2196f3;
 }
 

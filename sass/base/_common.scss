@@ -1,3 +1,12 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  outline: 2px solid red;
+}
 body {
   color: $title-color;
   background-color: $white;
@@ -5,13 +14,13 @@ body {
   font-family: $main-font-family;
   font-style: normal;
   letter-spacing: $main-letter_spacing;
-  outline-color: green;
 }
 .container {
   width: 100%;
   padding: 0 15px;
   margin-right: auto;
   margin-left: auto;
+
   @include for-size(mobile) {
     width: 450px;
     background-color: blue;

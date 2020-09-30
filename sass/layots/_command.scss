@@ -2,15 +2,12 @@
   background: $gray-bcg-color;
 }
 .comand__item {
-  // width: calc((100% - 30px * 3) / 4);
-  // margin-right: 30px;
   background-color: $white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-.comand__item:nth-child(4n) {
-  margin-right: 0px;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 /* padding for comands name and profeccion */
@@ -20,7 +17,10 @@
 
   line-height: $comand-line-height;
 }
-
+@include for-size(desktop) {
+  width: calc((100% - 30px * 3) / 4);
+  margin-right: 30px;
+}
 .comand__title {
   font-weight: $sec-font-weight;
   text-align: center;
