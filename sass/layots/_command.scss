@@ -16,16 +16,17 @@
   font-size: $btn-font-size;
 
   line-height: $comand-line-height;
-}
-@include for-size(desktop) {
-  width: calc((100% - 30px * 3) / 4);
-  margin-right: 30px;
-}
-.comand__title {
-  font-weight: $sec-font-weight;
-  text-align: center;
-}
 
-.comand__text {
-  text-align: center;
+  @include for-size(desktop) {
+    width: calc((100% - 30px * 3) / 4);
+    margin-right: 30px;
+  }
+  .comand__title {
+    font-weight: $sec-font-weight;
+    text-align: center;
+  }
+
+  .comand__text {
+    text-align: center;
+  }
 }
