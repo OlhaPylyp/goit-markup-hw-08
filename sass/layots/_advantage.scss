@@ -54,4 +54,13 @@
       margin-right: 0;
     }
   }
+
+  @include for-size(desktop) {
+    &__item {
+      width: calc((100% - 30px * 3) / 4);
+    }
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }

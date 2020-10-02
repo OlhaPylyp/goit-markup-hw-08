@@ -537,6 +537,15 @@ img {
   }
 }
 
+@media (min-width: 1200px) {
+  .advantage__item {
+    width: calc((100% - 30px * 3) / 4);
+  }
+  .advantage__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
 .about {
   display: none;
   /* контейнер для рисунков, чтоб можно было позиционировать */
