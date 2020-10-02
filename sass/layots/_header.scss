@@ -1,23 +1,107 @@
 .page-header {
-  padding: 16px 0;
+  position: relative;
   line-height: $title-line-height;
-
   border-bottom: 1px solid $border-header;
   align-items: center;
+}
+.header-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-menu {
+  @include for-size(mobile) {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 393px;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    background-color: $white;
+    z-index: 2;
+    .header-menu.is-open {
+      opacity: 1;
+      transform: translatey(61px);
+
+      .menu-button__icon-menu-bur {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline-color: none;
+  background-color: #fff;
+  &__icon-cross {
+    display: none;
+  }
+
+  &__icons {
+    position: absolute;
+    fill: $title-color;
+    cursor: pointer;
+    right: 15px;
+    top: 10px;
+    z-index: 2;
+    @include for-size(tablet) {
+      display: none;
+    }
+  }
+  &.is-open .menu-button__icon-cross {
+    display: block;
+  }
+  &.is-open .menu-button__icon-menu-bur {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $akcent-color;
+  }
 }
 
 /* ----------------------adress header-----------------------*/
 
 .header-adr {
-  @include for-size(tablet-only) {
-    display: none;
-    background-color: blue;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  letter-spacing: $secondary-letter_spacing;
+  border: none;
+  &__item {
+    font-size: $label-font-size;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__link {
+    display: flex;
+    color: $text-color;
+  }
+
+  /* конвертик и телефон возле почты */
+  &__icon {
+    margin-right: 8px;
+    fill: $text-color;
+    transition: fill $trancision;
+  }
+  &__item:hover .header-adr__icon {
+    fill: $akcent-color;
   }
 
   @include for-size(tablet) {
-    display: block;
-    background-color: red;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     letter-spacing: $secondary-letter_spacing;
     border: none;
@@ -25,11 +109,10 @@
       font-size: $label-font-size;
     }
     &__item:not(:last-child) {
-      margin-right: 0;
       margin-bottom: 10px;
     }
     &__link {
-      align-items: center;
+      display: flex;
       color: $text-color;
     }
 
@@ -38,6 +121,12 @@
       margin-right: 8px;
       fill: $text-color;
       transition: fill $trancision;
+    }
+    &__icon-mail {
+      width: 14px;
+      height: 10px;
+    }
+    &__icon-tel {
       width: 10px;
       height: 14px;
     }
@@ -47,20 +136,21 @@
     }
   }
   @include for-size(desktop) {
-    background-color: violet;
-
+    display: flex;
+    flex-direction: row;
     align-items: center;
     margin-left: auto;
     letter-spacing: $secondary-letter_spacing;
     border: none;
+    line-height: $main-line-height;
 
     &__item:not(:last-child) {
       margin-right: 30px;
+      margin-bottom: 0;
     }
 
     &__link {
-      display: inline-flex;
-      align-items: center;
+      display: flex;
       color: $text-color;
     }
 
@@ -69,10 +159,15 @@
       margin-right: 10px;
       fill: $text-color;
       transition: fill $trancision;
+    }
+    &__icon-mail {
+      width: 16px;
+      height: 12px;
+    }
+    &__icon-tel {
       width: 10px;
       height: 16px;
     }
-
     &__item:hover .header-adr__icon {
       fill: $akcent-color;
     }
