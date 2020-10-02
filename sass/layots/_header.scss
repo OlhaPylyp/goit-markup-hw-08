@@ -1,10 +1,13 @@
 .page-header {
-  position: relative;
+  // position: fixid;
+  // z-index: 1;
   line-height: $title-line-height;
   border-bottom: 1px solid $border-header;
   align-items: center;
 }
+
 .header-container {
+  position: relative;
   display: flex;
   width: 100%;
   align-items: center;
@@ -12,64 +15,61 @@
 }
 
 .header-menu {
-  @include for-size(mobile) {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 393px;
-    flex-direction: column;
-    top: 0;
-    right: 0;
-    background-color: $white;
-    z-index: 2;
-    .header-menu.is-open {
-      opacity: 1;
-      transform: translatey(61px);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  transform: translatey(-100%);
+  opacity: 0;
 
-      .menu-button__icon-menu-bur {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-      }
+  background-color: $white;
+  transition: 0.5s ease-in-out;
+
+  &.is-open {
+    opacity: 1;
+    transform: translatey(61px);
+    .container {
+      pointer-events: none;
     }
   }
 }
 
 .menu-button {
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
   border: none;
   outline-color: none;
   background-color: #fff;
   &__icon-cross {
     display: none;
   }
-
-  &__icons {
-    position: absolute;
-    fill: $title-color;
-    cursor: pointer;
-    right: 15px;
-    top: 10px;
-    z-index: 2;
-    @include for-size(tablet) {
+  &.is-open {
+    &__icon-cross {
+      display: block;
+    }
+    &__icon-menu-bur {
       display: none;
     }
   }
-  &.is-open .menu-button__icon-cross {
-    display: block;
-  }
-  &.is-open .menu-button__icon-menu-bur {
-    display: none;
-  }
-
+}
+.menu-button__icons {
+  position: absolute;
+  fill: $title-color;
+  cursor: pointer;
+  right: 15px;
+  top: 10px;
+  z-index: 2;
   &:hover,
   &:focus {
     fill: $akcent-color;
   }
+  @include for-size(tablet) {
+    display: none;
+  }
 }
-
 /* ----------------------adress header-----------------------*/
 
 .header-adr {
