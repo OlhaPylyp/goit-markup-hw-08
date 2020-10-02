@@ -1,5 +1,5 @@
 .advantage {
-  padding-bottom: 0;
+  padding-bottom: 60px;
 
   &__item {
     text-align: center;
@@ -25,6 +25,7 @@
   &__text {
     line-height: $text-line-height;
     text-align: left;
+    margin-bottom: 30px;
   }
 
   /* добавляем  иконки сверху списка преимуществ с помощью псевдоелемента */
