@@ -672,10 +672,10 @@ img {
   .client__item {
     width: calc((100% - 30px * 3) / 4);
   }
-  .client__item:nth-child(4n) {
-    margin-right: 0;
+  .client__item:not(:last-child) {
+    margin-right: 30px;
   }
-  .client__item:nth-last-child(-n + 3) {
+  .client__item:nth-last-child(-n + 4) {
     margin-bottom: 0;
   }
 }
