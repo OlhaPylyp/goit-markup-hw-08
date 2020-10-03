@@ -493,6 +493,29 @@ img {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .advantage__item {
+    width: calc((100% - 30px * 1) / 2);
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .advantage__item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantage__item {
+    width: calc((100% - 30px * 3) / 4);
+  }
+  .advantage__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .advantage__item:nth-last-child(-n + 6) {
+    margin-bottom: 0;
+  }
+}
+
 .advantage__item::before {
   display: block;
   margin-bottom: 30px;
@@ -532,28 +555,6 @@ img {
 .advantage__icon-astronaut::before {
   padding: 25px 100px;
   background-image: url(../image/astronaut.svg);
-}
-
-@media (min-width: 768px) {
-  .advantage__item {
-    width: calc((100% - 30px * 1) / 2);
-    margin-right: 30px;
-  }
-  .advantage__item:nth-child(2n) {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .advantage__item {
-    width: calc((100% - 30px * 3) / 4);
-  }
-  .advantage__item:not(:last-child) {
-    margin-right: 30px;
-  }
-  .advantage__item:nth-last-child(-n + 2) {
-    margin-bottom: 0;
-  }
 }
 
 .about {
