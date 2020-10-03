@@ -1,33 +1,59 @@
 .page-footer {
   background: $baner-bcg-color;
   font-weight: 400;
-  line-height: $text-line-height;
+ 
 }
-.footer-flexbox {
-  display: block;
+.footer-flexbox { 
+  @include for-size(desktop){
+  display: flex;
+  align-items: baseline;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 60px 15px;
+  }  
+  
+}  
+.tablet-container{
   @include for-size(tablet) {
     display: flex;
-    align-items: baseline;
+justify-content: space-between;
+align-items: baseline;
+    padding-left: 61px;
+    padding-right: 74px;
+  padding-bottom: 60px;}
+   @include for-size(desktop){      
+  
+     padding-bottom: 0px;
+     padding-right:87px;
+
+   }
   }
-}
+
+
 
 /* описываем контейнер контактов в футере, задаю верхний и нижний падинги*/
 .footer-container {
-  @include for-size(mobile) {
+  
+  flex-direction: column;
     text-align: center;
-    padding: 60px 124px;
-  }
-}
-.footer-logo {
-  display: inline-block;
-  margin-bottom: 20px;
+   @include for-size(desktop){ margin-right: 64px;
+
+   }}
+      
+     
+  
+
+.footer-logo {  
   color: $white;
   text-decoration: none;
-  @include font(26px, $comand-line-height);
-  font-family: Raleway, sans-serif;
+  @include font(24px, $title-line-height);
+  font-family: $sec-font-family; 
+  margin-bottom: 20px;
+  display: inline-block;
 }
 .asdress {
   flex-direction: column;
+
 }
 .adress__link {
   margin-top: 9px;
@@ -39,7 +65,8 @@
 }
 .adress__text {
   color: $white;
-  font-style: normal;
+ @include font($main-font-size, $text-line-height);
+     font-style: normal;
 }
 .adress__link:hover,
 .adress__link:focus {
@@ -51,25 +78,31 @@
 
 /* стили для заголовка футера*/
 .footer__social-container {
-  // margin-right: 93px;
-  @include for-size(mobile) {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
     text-align: center;
-    padding-bottom: 60px;
-  }
+   padding: 60px;
+   @include for-size(tablet){
+     padding: 0;
+   }
+
+
+
 }
 .footer__title {
   margin-top: 0;
   margin-bottom: 20px;
   color: $white;
-  @include font($main-font-size, $hero-line-height);
+  @include font($main-font-size, $main-line-height);
   text-transform: uppercase;
 }
 /* стили для соц сетей футера */
 .footer__social {
   display: flex;
-  @include for-size(mobile) {
     justify-content: center;
-  }
+  
 }
 .footer__social-item:not(:last-child) {
   margin-right: 10px;

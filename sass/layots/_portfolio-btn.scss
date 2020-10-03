@@ -1,38 +1,27 @@
-.portfolio {
-  @include font($btn-font-size, 1.625, 500);
+ .portfolio {
   display: flex;
   flex-wrap: wrap;
-
-  @include for-size(tablet-only) {
-    margin-bottom: 40px;
-    &__item:nth-child(-n + 3) {
-      margin-bottom: 15px;
-    }
-  }
-
-  @include for-size(tablet) {
-    margin-bottom: 30px;
-    justify-content: center;
-  }
-  @include for-size(desktop) {
-    &__item {
-      margin-bottom: 50px;
-    }
-  }
-  // @include for-size(tablet-only) {
-  //   &__item:nth-child(-n + 3) {
-  //     margin-bottom: 15px;
-  //   }
-  // }
-
   &__item:not(:last-child) {
-    margin-right: 8px;
-  }
+   margin-right: 8px;
+ } 
+ 
+    @include for-size(tablet-only){
+    margin-bottom: 40px;
 
-  // .portfolio__item:not(:last-child) {
-  //   margin-right: 8px;
-  // }
-  /* position for button portfolio*/
+  &__item:nth-child(-n + 3){
+   margin-bottom: 15px;}}}
+ 
+ .portfolio {
+  @include for-size(tablet)
+  {margin-bottom:  30px;
+  justify-content: center;}
+
+  @include for-size(desktop){
+      justify-content: center;
+  &__item {margin-bottom:  50px;
+  }
+}
+  
 
   &__btn {
     padding: 6px 22px;
@@ -58,3 +47,4 @@
     }
   }
 }
+
