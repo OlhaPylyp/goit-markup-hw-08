@@ -814,31 +814,33 @@ img {
   font-weight: 400;
 }
 
+.footer-flexbox {
+  padding: 60px 15px;
+}
+
 @media (min-width: 1200px) {
   .footer-flexbox {
     display: flex;
     align-items: baseline;
     margin-right: auto;
     margin-left: auto;
-    padding: 60px 15px;
   }
 }
 
 @media (min-width: 768px) {
   .tablet-container {
     display: flex;
+    padding: 0 74px 0 61px;
     justify-content: space-between;
     align-items: baseline;
-    padding-left: 61px;
-    padding-right: 74px;
-    padding-bottom: 60px;
   }
 }
 
 @media (min-width: 1200px) {
   .tablet-container {
-    padding-bottom: 0px;
-    padding-right: 87px;
+    padding-bottom: 0;
+    padding-right: 0;
+    margin-right: 87px;
   }
 }
 
@@ -982,6 +984,7 @@ img {
   .footer-form__input {
     width: 358px;
     margin-right: 12px;
+    margin-bottom: 0;
   }
 }
 

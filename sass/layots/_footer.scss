@@ -3,29 +3,29 @@
   font-weight: 400;
  
 }
-.footer-flexbox { 
+.footer-flexbox { padding: 60px 15px;
   @include for-size(desktop){
   display: flex;
   align-items: baseline;
   margin-right: auto;
   margin-left: auto;
-  padding: 60px 15px;
+  
   }  
   
 }  
-.tablet-container{
+.tablet-container{ 
   @include for-size(tablet) {
     display: flex;
+    padding:0 74px 0 61px;
 justify-content: space-between;
 align-items: baseline;
-    padding-left: 61px;
-    padding-right: 74px;
-  padding-bottom: 60px;}
-   @include for-size(desktop){      
+   }
+   @include for-size(desktop){    
   
-     padding-bottom: 0px;
-     padding-right:87px;
-
+     padding-bottom: 0;
+     padding-right: 0;
+     margin-right:87px;
+      
    }
   }
 
