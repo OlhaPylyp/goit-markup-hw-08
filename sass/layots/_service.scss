@@ -1,48 +1,62 @@
-.service__item {
-  width: calc((100% - 30px * 2) / 3);
-  margin-right: 30px;
-  margin-left: 0;
-  margin-bottom: 30px;
 
-  border: 1px solid $border-portfolio;
-  transition: all $trancision;
-}
-
-.service__item:nth-child(3n) {
-  margin-right: 0;
-}
-.service__item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
-
-.servise-container {
-  padding: 20px 24px;
-}
-/*portfolio service*/
-.servise__title {
+.servise{
+  &__title {
   margin-top: 0;
   margin-bottom: 4px;
-  @include font($title-sec-font-size, $title-sec-line-height);
-  color: $title-color;
-}
-.servise__text {
+  @include font($title-sec-font-size, $title-sec-line-height, $main-font-weight);
+  
+  color: $title-color;}
+
+&__text {
   @include font($btn-font-size, $text-sec-line-height, $sec-font-weight);
-}
-
-/* Ховер и фокус для списка по сервису */
-
-.service__item:hover {
+}}
+  
+.service__item {
+ 
+  border: 1px solid $border-portfolio;
+  transition: all $trancision;
+   &:not(:last-child) {
+     margin-bottom: 30px;
+   }
+   &:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+ @include for-size(tablet-desktop){
+    width: calc((100% - 30px) /2);
+  margin-right: 30px;
+   
+&:nth-child(2n) {
+  margin-right: 0;
+ }
+ &:nth-last-child(-n + 1) {
+    margin-bottom: 0;}
+   
+ }
+  @include for-size(desktop){
+  width: calc((100% - 30px * 2) / 3);
+  margin-right: 30px; 
+&:nth-child(3n) {
+  margin-right: 0;
+}
+&:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+  }
+}
+
+.servise-container {
+  
+  padding: 20px 24px;
+}
+
 /* оверлей для списка сервиса */
 .service-overlay {
   position: relative;
   overflow: hidden;
-}
 
-.overlay__text {
-  display: inline-block;
+&__text {
+  // display: inline-block;
   position: absolute;
   margin: 0;
   top: 0;
@@ -50,15 +64,27 @@
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-  padding: 63px 24px;
+
   @include font($title-sec-font-size, 1.55, $text-font-weight);
   color: $white;
   transform: translatey(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include for-size(tablet-only) {
+      padding: 77px 24px;
+      overflow: scroll;
+    }
+
+    @include for-size(tablet-desktop) {
+      padding: 49px 24px;
+    }
+    @include for-size(desktop) {
+      padding: 63px 24px;
+    }
 }
 
 /* переход для проектов */
-.service-overlay:hover .overlay__text,
-.service-overlay:focus .overlay__text {
+&:hover &__text,
+&:focus &__text {
   transform: translatey(0);
-}
+}}
