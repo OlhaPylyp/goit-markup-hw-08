@@ -106,6 +106,15 @@ img {
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  .section-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+    font-weight: 700;
+  }
+}
+
 .btn {
   display: flex;
   margin: 0px auto;
@@ -554,6 +563,7 @@ img {
 @media (min-width: 1200px) {
   .about {
     display: flex;
+    padding-top: 0;
     /* контейнер для рисунков, чтоб можно было позиционировать */
   }
   .about .about__item:nth-child(3n) {

@@ -11,4 +11,8 @@
   margin-bottom: 30px;
   @include font($section-font-size, $title-line-height);
   text-align: center;
+  @include for-size(desktop) {
+    margin-bottom: 50px;
+    @include font(36px, $title-line-height);
+  }
 }

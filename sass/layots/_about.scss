@@ -3,6 +3,7 @@
 
   @include for-size(desktop) {
     display: flex;
+    padding-top: 0;
     .about__item:nth-child(3n) {
       margin-right: 0px;
     }
