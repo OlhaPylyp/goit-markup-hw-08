@@ -753,14 +753,22 @@ img {
 }
 
 .footer-flexbox {
-  display: flex;
-  align-items: baseline;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .footer-flexbox {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 /* описываем контейнер контактов в футере, задаю верхний и нижний падинги*/
-.footer-container {
-  padding: 60px 0;
-  margin-right: 70px;
+@media (min-width: 480px) {
+  .footer-container {
+    text-align: center;
+    padding: 60px 0px;
+  }
 }
 
 .footer-logo {
@@ -804,6 +812,13 @@ img {
   margin-right: 93px;
 }
 
+@media (min-width: 480px) {
+  .footer__social-container {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+}
+
 .footer__title {
   margin-top: 0;
   margin-bottom: 20px;
@@ -817,6 +832,12 @@ img {
 /* стили для соц сетей футера */
 .footer__social {
   display: flex;
+}
+
+@media (min-width: 480px) {
+  .footer__social {
+    justify-content: center;
+  }
 }
 
 .footer__social-item:not(:last-child) {
@@ -834,6 +855,12 @@ img {
   width: 20px;
   height: 20px;
   fill: #ffffff;
+}
+
+@media (min-width: 480px) {
+  .delivery {
+    text-align: center;
+  }
 }
 
 .footer-form__input::placeholder {

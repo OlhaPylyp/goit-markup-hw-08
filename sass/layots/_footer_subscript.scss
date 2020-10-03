@@ -1,3 +1,8 @@
+.delivery {
+  @include for-size(mobile) {
+    text-align: center;
+  }
+}
 .footer-form__input::placeholder {
   @include font($btn-font-size, 1.25);
   color: rgba(255, 255, 255, 0.6);
