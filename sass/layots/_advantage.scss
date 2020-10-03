@@ -1,45 +1,6 @@
 .advantage {
   padding-bottom: 60px;
 
-  &__item {
-    text-align: center;
-    //
-    // margin-right: 30px;
-  }
-  @include for-size(tablet) {
-    &__item {
-      width: calc((100% - 30px * 1) / 2);
-      margin-right: 30px;
-      margin-bottom: 0;
-    }
-    &__item:nth-child(2n) {
-      margin-right: 0;
-    }
-  }
-
-  @include for-size(desktop) {
-    &__item {
-      width: calc((100% - 30px * 3) / 4);
-    }
-    &__item:not(:last-child) {
-      margin-right: 30px;
-    }
-    &__item:nth-last-child(-n + 6) {
-      margin-bottom: 0;
-    }
-  }
-
-  &__item::before {
-    display: block;
-    margin-bottom: 30px;
-
-    content: "";
-    height: 120px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: $gray-bcg-color;
-    border-radius: 4px;
-  }
   &__title {
     text-transform: uppercase;
   }
@@ -47,7 +8,56 @@
   &__text {
     line-height: $text-line-height;
     text-align: left;
+  }
+  &__text:not(:last-child) {
     margin-bottom: 30px;
+  }
+
+  &__item {
+    text-align: center;
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @include for-size(tablet) {
+      & {
+        width: calc((100% - 30px) / 2);
+        margin-right: 30px;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+        &:nth-child(n + 2) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    @include for-size(desktop) {
+      & {
+        width: calc((100% - 30px * 3) / 4);
+      }
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+      &:nth-last-child(-n + 6) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item::before {
+    display: block;
+    content: "";
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $gray-bcg-color;
+    border-radius: 4px;
+    & {
+      margin-bottom: 30px;
+    }
   }
 
   /* добавляем  иконки сверху списка преимуществ с помощью псевдоелемента */

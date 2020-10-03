@@ -139,49 +139,27 @@ img {
 }
 
 .page-header {
+  position: fixid;
+  z-index: 2;
   line-height: 1.17;
   border-bottom: 1px solid #ececec;
   align-items: center;
+  padding: 10px 0px;
 }
 
-.header-container {
-  position: relative;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header-menu {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  transform: translatey(-100%);
-  opacity: 0;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-  background-color: #ffffff;
-  transition: 0.5s ease-in-out;
-}
-
-.header-menu.is-open {
-  opacity: 1;
-  transform: translatey(61px);
-}
-
-.header-menu.is-open .container {
-  pointer-events: none;
+@media (min-width: 768px) {
+  .page-header {
+    padding: 21px 0;
+  }
 }
 
 .menu-button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
   border: none;
   outline-color: none;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .menu-button__icon-cross {
@@ -197,12 +175,7 @@ img {
 }
 
 .menu-button__icons {
-  position: absolute;
   fill: #212121;
-  cursor: pointer;
-  right: 15px;
-  top: 10px;
-  z-index: 2;
 }
 
 .menu-button__icons:hover, .menu-button__icons:focus {
@@ -215,6 +188,50 @@ img {
   }
 }
 
+.header-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-menu {
+    padding-top: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    transform: translatey(-100%);
+    opacity: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    transition: 0.5s ease-in-out;
+  }
+  .header-menu.is-open {
+    opacity: 1;
+    transform: translatey(61px);
+  }
+  .header-menu.is-open .container {
+    pointer-events: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-menu {
+    display: flex;
+    align-items: center;
+  }
+}
+
 /* ----------------------adress header-----------------------*/
 .header-adr {
   display: flex;
@@ -222,15 +239,37 @@ img {
   margin-left: auto;
   letter-spacing: 0.02em;
   border: none;
+  font-size: 12px;
   /* конвертик и телефон возле почты */
 }
 
-.header-adr__item {
-  font-size: 12px;
+@media (max-width: 767px) {
+  .header-adr {
+    align-items: normal;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-adr {
+    flex-direction: row;
+  }
 }
 
 .header-adr__item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .header-adr__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-adr__item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
 }
 
 .header-adr__link {
@@ -250,11 +289,6 @@ img {
 
 @media (min-width: 768px) {
   .header-adr {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    letter-spacing: 0.02em;
-    border: none;
     /* конвертик и телефон возле почты */
   }
   .header-adr__item {
@@ -354,14 +388,22 @@ img {
   color: #2196f3;
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  margin-left: 0px;
+.navigation {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .navigation {
+    text-align: left;
+  }
 }
 
 .menu__item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 40px;
+}
+
+.menu__item:last-child {
+  margin-bottom: 60px;
 }
 
 .menu__link {
@@ -433,7 +475,7 @@ img {
 }
 
 @media (min-width: 768px) and (min-width: 1200px) {
-  .menu__link--active::after {
+  .menu {
     bottom: -2%;
   }
 }
@@ -489,18 +531,38 @@ img {
   /* добавляем  иконки сверху списка преимуществ с помощью псевдоелемента */
 }
 
+.advantage__title {
+  text-transform: uppercase;
+}
+
+.advantage__text {
+  line-height: 1.7;
+  text-align: left;
+}
+
+.advantage__text:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .advantage__item {
   text-align: center;
+  width: 100%;
+}
+
+.advantage__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
   .advantage__item {
-    width: calc((100% - 30px * 1) / 2);
+    width: calc((100% - 30px) / 2);
     margin-right: 30px;
-    margin-bottom: 0;
   }
   .advantage__item:nth-child(2n) {
     margin-right: 0;
+  }
+  .advantage__item:nth-child(n + 2) {
+    margin-bottom: 0;
   }
 }
 
@@ -518,7 +580,6 @@ img {
 
 .advantage__item::before {
   display: block;
-  margin-bottom: 30px;
   content: "";
   height: 120px;
   background-repeat: no-repeat;
@@ -527,13 +588,7 @@ img {
   border-radius: 4px;
 }
 
-.advantage__title {
-  text-transform: uppercase;
-}
-
-.advantage__text {
-  line-height: 1.7;
-  text-align: left;
+.advantage__item::before {
   margin-bottom: 30px;
 }
 
@@ -767,7 +822,7 @@ img {
 @media (min-width: 480px) {
   .footer-container {
     text-align: center;
-    padding: 60px 0px;
+    padding: 60px 124px;
   }
 }
 
@@ -808,10 +863,6 @@ img {
 
 /* ---------------колонка с соцсетями в футере----------------- */
 /* стили для заголовка футера*/
-.footer__social-container {
-  margin-right: 93px;
-}
-
 @media (min-width: 480px) {
   .footer__social-container {
     text-align: center;

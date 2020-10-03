@@ -15,7 +15,7 @@
 .footer-container {
   @include for-size(mobile) {
     text-align: center;
-    padding: 60px 0px;
+    padding: 60px 124px;
   }
 }
 .footer-logo {
@@ -51,7 +51,7 @@
 
 /* стили для заголовка футера*/
 .footer__social-container {
-  margin-right: 93px;
+  // margin-right: 93px;
   @include for-size(mobile) {
     text-align: center;
     padding-bottom: 60px;

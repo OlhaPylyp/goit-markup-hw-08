@@ -1,10 +1,18 @@
-.menu {
-  display: flex;
-  flex-direction: column;
-  margin-left: 0px;
-  &__item:not(:last-child) {
-    margin-right: 50px;
+.navigation {
+  text-align: center;
+  @include for-size(tablet) {
+    text-align: left;
   }
+}
+
+.menu {
+  &__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  &__item:last-child {
+    margin-bottom: 60px;
+  }
+
   &__link {
     color: $title-color;
     cursor: pointer;
@@ -66,9 +74,9 @@
       border-radius: 2px;
       background-color: $akcent-color;
       bottom: -8%;
-      @include for-size(desktop) {
-        bottom: -2%;
-      }
+    }
+    @include for-size(desktop) {
+      bottom: -2%;
     }
   }
 }
