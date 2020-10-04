@@ -18,6 +18,7 @@
 .is-hidden.modal {
   transform: translate(-50%, -50%) scale(0.5);
 }
+.form-pos
 .modal {
   position: absolute;
   padding: 40px 39px 40px 41px;
@@ -34,41 +35,33 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform $trancision;
 
-  // &__icon {
-  //   width: 18px;
-  //   height: 18px;
-  //   fill: $logo2-color;
-  //   transition: fill $trancision;
+  &__icon {
+  // width: 18px;
+  // height: 18px;
+  fill: $logo2-color;
+ transition: fill $trancision;
 
-  }
+  }}
 
-.bt-close {
-
+&__bt-close {
   position: absolute;
   top: 8px;
   right: 8px;
 
   padding: 6px;
-
+text-align: center;
   background-color: $white;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   color: $logo2-color;
-  // text-align: center;
+ 
   cursor: pointer;
   outline: none;
 
   &:hover,
   &:focus {
     fill: $akcent-color;
-  }
+  }}
 
-      display: flex;
-    align-items: center;
-  &__icon {
-     display: block;
-    fill: $logo2-color;    
-    transition: fill $trancision;}
-
-  }
+  
 
