@@ -14,7 +14,7 @@
    .tablet-container{ 
   @include for-size(tablet) {
     display: flex;
-    padding:0 74px 60px 61px;
+    // padding:0 74px 60px 61px;
 justify-content: space-between;
 align-items: baseline;
    }

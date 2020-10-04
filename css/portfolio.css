@@ -667,7 +667,6 @@ img {
 @media (min-width: 768px) {
   .footer-flexbox .tablet-container {
     display: flex;
-    padding: 0 74px 60px 61px;
     justify-content: space-between;
     align-items: baseline;
   }
