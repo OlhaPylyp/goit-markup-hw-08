@@ -140,7 +140,6 @@ img {
 
 .page-header {
   position: relative;
-  z-index: 2;
   line-height: 1.17;
   border-bottom: 1px solid #ececec;
 }

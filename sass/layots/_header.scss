@@ -1,6 +1,6 @@
 .page-header {
   position: relative;
-  z-index: 2;
+ 
   line-height: $title-line-height;
   border-bottom: 1px solid $border-header;
   @include for-size(tablet-only){
