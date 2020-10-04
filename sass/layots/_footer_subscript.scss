@@ -42,11 +42,10 @@ margin-bottom: 0;}
     height: 50px;
 }
 
-.btn-footer::after {
+.btn--footer::after {
   content: "";
   margin-left: 10px;
   width: 24px;
   height: 24px;
-  fill: $white;
   background-image: url(../image/icon-send.svg);
 }

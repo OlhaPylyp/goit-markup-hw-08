@@ -29,6 +29,8 @@ padding:16px 0;}
   padding: 0;
   border: none;
   outline-color: none;
+    width: 40px;
+  height: 40px;
   background-color: transparent;
   &__icon-cross {
     display: none;
@@ -41,7 +43,7 @@ padding:16px 0;}
     }  
 &__icons {
     fill: $title-color;
-    width: 40px;
+  width: 40px;
   height: 40px;
 
   // cursor: pointer;
@@ -106,6 +108,7 @@ display: flex;
   }
  &__link {
     display: flex;
+    align-items: center;
     color: $text-color; }
     
     &__icon {

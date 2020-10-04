@@ -180,6 +180,8 @@ img {
   padding: 0;
   border: none;
   outline-color: none;
+  width: 40px;
+  height: 40px;
   background-color: transparent;
 }
 
@@ -264,6 +266,7 @@ img {
 
 .header-adr__link {
   display: flex;
+  align-items: center;
   color: #757575;
 }
 
@@ -332,6 +335,12 @@ img {
 
 .nav {
   display: flex;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    align-items: center;
+  }
 }
 
 .logo {
@@ -414,7 +423,7 @@ img {
     letter-spacing: 0.02em;
   }
   .menu__link--active {
-    padding: 32px 0;
+    padding: 34px 0;
     position: relative;
     color: #2196f3;
     text-decoration: none;
@@ -828,12 +837,11 @@ img {
   height: 50px;
 }
 
-.btn-footer::after {
+.btn--footer::after {
   content: "";
   margin-left: 10px;
   width: 24px;
   height: 24px;
-  fill: #ffffff;
   background-image: url(../image/icon-send.svg);
 }
 /*# sourceMappingURL=portfolio.css.map */
