@@ -678,14 +678,15 @@
     <!-------------- модальное окно ---------->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="bt-close"  data-modal-close>
-          <svg clas="bt-close__icon" width="18px" height="18px">
+        <button class="bt-close flexbox" data-modal-close>
+          <svg clas="modal__icon" width="18" height="18">
             <use href="./image/sprite.svg#cross"></use>
           </svg>
         </button>
+       
         <!----------------Форма---------->
         <form class="form" autocomplete="off">
-          <b class="form__title">Оставьте свои данные, мы вам перезвоним</b>
+          <b class="form__title">Оставьте свои данные, мы вам перезвоним</b>      
           <div class="form-field">
             <label class="form__label" for="name">Имя</label>
             <input
@@ -748,9 +749,11 @@
               <a href="" class="form__link">Условия договора</a></span
             >
           </label>
+     
 
           <button type="submit" class="btn btn--form">Отправить</button>
         </form>
+       
       </div>
     </div>
     <script src="./js/menu-tel.js"></script>
