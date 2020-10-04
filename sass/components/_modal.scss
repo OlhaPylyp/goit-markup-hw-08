@@ -57,12 +57,12 @@
   &:hover,
   &:focus {
     fill: $akcent-color;
-  }
+  }}
   
-  &__icon{
+  .bt-close__icon{
      display: block;
     fill: $logo2-color;
     transition: fill $trancision;
 
   }
-}
+
