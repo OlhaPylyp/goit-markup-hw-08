@@ -6,9 +6,9 @@
   font-family: $sec-font-family;
   @include font(24px, $title-line-height);
 
-  @include for-size(desktop) {
-    margin-right: 93px;
-  }
+  // @include for-size(desktop) {
+  //   margin-right: 93px;
+  // }
 }
 .logo-web {
   color: $akcent-color;

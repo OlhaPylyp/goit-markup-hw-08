@@ -39,9 +39,8 @@ padding-bottom: 60px;
     height: 4px;
     border-radius: 2px;
     background-color: $akcent-color;
-    bottom: -8%;
-  }
-  }
+  }}
+  
   @include for-size(tablet) {
     display: flex;
     justify-content: baseline;
@@ -77,10 +76,10 @@ padding-bottom: 60px;
       height: 4px;
       border-radius: 2px;
       background-color: $akcent-color;
-      bottom: -2%;
-    }
-  }
-   @include for-size(desktop) {
+    }}
+ @include for-size(desktop) {
      
-   }
+ margin-right: 305px}
 }
+
+

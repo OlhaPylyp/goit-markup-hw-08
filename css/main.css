@@ -334,12 +334,6 @@ img {
   display: flex;
 }
 
-@media (min-width: 768px) {
-  .nav {
-    align-items: center;
-  }
-}
-
 .logo {
   text-decoration: none;
   color: #212121;
@@ -347,12 +341,6 @@ img {
   font-size: 24px;
   line-height: 1.17;
   font-weight: 700;
-}
-
-@media (min-width: 1200px) {
-  .logo {
-    margin-right: 93px;
-  }
 }
 
 .logo-web {
@@ -404,7 +392,6 @@ img {
     height: 4px;
     border-radius: 2px;
     background-color: #2196f3;
-    bottom: -8%;
   }
 }
 
@@ -444,7 +431,12 @@ img {
     height: 4px;
     border-radius: 2px;
     background-color: #2196f3;
-    bottom: -2%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu {
+    margin-right: 305px;
   }
 }
 
