@@ -1,38 +1,49 @@
 .page-header {
-  position: fixid;
+  position: relative;
   z-index: 2;
   line-height: $title-line-height;
   border-bottom: 1px solid $border-header;
-  align-items: center;
-  padding: 10px 0px;
-
+  @include for-size(tablet-only){
+padding:16px 0;}
   @include for-size(tablet) {
-    padding: 21px 0;
+  padding: 21px 0;
+  }
+  @include for-size(desktop) {
+  padding: 25px 0;
   }
 }
-.menu-button {
-  display: inline-block;
+.header-container {   
+  display: flex;
+  justify-content: space-between;  
+
+  width: 100%;
+  @include for-size(tablet) {
+    align-items: center;
+  }
+}
+
+
+.menu-button {   
+  // display: inline-block;
   margin: 0;
   padding: 0;
-
   border: none;
   outline-color: none;
   background-color: transparent;
   &__icon-cross {
     display: none;
   }
-  &.is-open {
-    &__icon-cross {
+  &.is-open &__icon-cross {
       display: block;
     }
-    &__icon-menu-bur {
+   &.is-open &__icon-menu-bur {
       display: none;
-    }
-  }
-}
-.menu-button__icons {
-  // position: absolute;
-  fill: $title-color;
+    }  
+&__icons {
+    fill: $title-color;
+    width: 40px;
+  height: 40px;
+
   // cursor: pointer;
   // z-index: 2;
   &:hover,
@@ -42,26 +53,15 @@
   @include for-size(tablet) {
     display: none;
   }
-}
+}}
 
-.header-container {
-  // position: relative;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  @include for-size(tablet) {
-    align-items: center;
-  }
-}
-@include for-size(tablet-only) {
-  .header-menu {
-    padding-top: 60px 0;
-
+.header-menu {
+ @include for-size(tablet-only){
+ position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
+    padding: 60px 0;
     // top: 0;
     right: 0;
     width: 100%;
@@ -79,53 +79,36 @@
         pointer-events: none;
       }
     }
-  }
-}
-@include for-size(tablet) {
-  .header-menu {
-    display: flex;
-    align-items: center;
-  }
-}
+    }@include for-size(tablet){
+display: flex;
+    justify-content: space-between;}
+  } 
+ 
+
 
 /* ----------------------adress header-----------------------*/
 
-.header-adr {
+.header-adr { 
+  @include for-size(tablet-only){    
   display: flex;
   flex-direction: column;
-  margin-left: auto;
+  align-items: center;
   letter-spacing: $secondary-letter_spacing;
   border: none;
-  font-size: $label-font-size;
-  @include for-size(tablet-only) {
-    align-items: normal;
-  }
-
-  @include for-size(desktop) {
-    flex-direction: row;
-  }
-
+  font-size: $label-font-size;  
   &__item:not(:last-child) {
-    margin-bottom: 16px;
-    @include for-size(tablet-desktop) {
-      & {
-        margin-bottom: 10px;
-      }
-    }
-    @include for-size(desktop) {
-      & {
-        margin-right: 30px;
-        margin-bottom: 0px;
-      }
-    }
+    margin-bottom: 16px;} 
+     &__icon {
+    margin-right: 10px;
+    fill: $text-color;
+    transition: fill $trancision;
   }
-  &__link {
+  }
+ &__link {
     display: flex;
-    color: $text-color;
-  }
-
-  /* конвертик и телефон возле почты */
-  &__icon {
+    color: $text-color; }
+    
+    &__icon {
     margin-right: 8px;
     fill: $text-color;
     transition: fill $trancision;
@@ -134,24 +117,23 @@
     fill: $akcent-color;
   }
 
-  @include for-size(tablet) {
+   @include for-size(tablet-desktop){
+     display: flex;
+  flex-direction: column;
+  // align-items: center;
+  letter-spacing: $secondary-letter_spacing;
+  border: none;
+  font-size: $label-font-size;  
+  align-items: normal;
+    margin-left: auto;
     &__item {
       font-size: $label-font-size;
     }
     &__item:not(:last-child) {
       margin-bottom: 10px;
     }
-    &__link {
-      display: flex;
-      color: $text-color;
-    }
-
-    /* конвертик и телефон возле почты */
     &__icon {
-      margin-right: 8px;
-      fill: $text-color;
-      transition: fill $trancision;
-    }
+      margin-bottom: 0;}
     &__icon-mail {
       width: 14px;
       height: 10px;
@@ -159,37 +141,21 @@
     &__icon-tel {
       width: 10px;
       height: 14px;
+    }    
     }
 
-    &__item:hover .header-adr__icon {
-      fill: $akcent-color;
-    }
-  }
-  @include for-size(desktop) {
-    display: flex;
+    @include for-size(desktop) {
+      &__item {
+        margin-right: 30px;
+        margin-bottom: 0px;
+      }
+      display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: auto;
     letter-spacing: $secondary-letter_spacing;
     border: none;
     line-height: $main-line-height;
-
-    &__item:not(:last-child) {
-      margin-right: 30px;
-      margin-bottom: 0;
-    }
-
-    &__link {
-      display: flex;
-      color: $text-color;
-    }
-
-    /* конвертик и телефон возле почты */
-    &__icon {
-      margin-right: 10px;
-      fill: $text-color;
-      transition: fill $trancision;
-    }
     &__icon-mail {
       width: 16px;
       height: 12px;
@@ -198,8 +164,8 @@
       width: 10px;
       height: 16px;
     }
-    &__item:hover .header-adr__icon {
-      fill: $akcent-color;
-    }
-  }
+
+
+    } 
+
 }

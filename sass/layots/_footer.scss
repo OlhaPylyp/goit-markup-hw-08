@@ -10,13 +10,11 @@
   margin-right: auto;
   margin-left: auto;
   
-  }  
-  
-}  
-.tablet-container{ 
+  } 
+   .tablet-container{ 
   @include for-size(tablet) {
     display: flex;
-    padding:0 74px 0 61px;
+    padding:0 74px 60px 61px;
 justify-content: space-between;
 align-items: baseline;
    }
@@ -29,9 +27,9 @@ align-items: baseline;
    }
   }
 
-
-
-/* описываем контейнер контактов в футере, задаю верхний и нижний падинги*/
+ 
+  
+}  
 .footer-container {
   
   flex-direction: column;
@@ -39,6 +37,11 @@ align-items: baseline;
    @include for-size(desktop){ margin-right: 64px;
 
    }}
+
+
+
+/* описываем контейнер контактов в футере, задаю верхний и нижний падинги*/
+
       
      
   
@@ -77,13 +80,11 @@ align-items: baseline;
 /* ---------------колонка с соцсетями в футере----------------- */
 
 /* стили для заголовка футера*/
-.footer__social-container {
-  
+.footer__social-container {  
   display: flex;
   flex-direction: column;
-  justify-content: center;
     text-align: center;
-   padding: 60px;
+   padding: 60px 0;
    @include for-size(tablet){
      padding: 0;
    }
