@@ -34,15 +34,16 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform $trancision;
 
-  &__icon {
-    width: 18px;
-    height: 18px;
-    fill: $logo2-color;
-    transition: fill $trancision;
+  // &__icon {
+  //   width: 18px;
+  //   height: 18px;
+  //   fill: $logo2-color;
+  //   transition: fill $trancision;
 
   }
-}
+
 .bt-close {
+
   position: absolute;
   top: 8px;
   right: 8px;
@@ -61,13 +62,13 @@
   &:focus {
     fill: $akcent-color;
   }
-}
-  
-  .bt-close__icon{
+
+      display: flex;
+    align-items: center;
+  &__icon {
      display: block;
-    fill: $logo2-color;
-    
-    transition: fill $trancision;
+    fill: $logo2-color;    
+    transition: fill $trancision;}
 
   }
 
