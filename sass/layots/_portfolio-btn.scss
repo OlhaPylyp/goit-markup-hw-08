@@ -1,11 +1,28 @@
- .portfolio {
+//  .portfolio {
+//    display: flex;
+//     flex-wrap: wrap;
+//     padding: 40px;
+  
+//    @include for-size(tablet-desktop) {
+//     margin-bottom: 30px;
+//     justify-content: center;
+//   }
+
+//   @include for-size(desktop) {
+//     justify-content: center;
+//     padding-top: 94px;
+//     margin-bottom: 50px;
+//   }
+
+
+.portfolio{
   display: flex;
   flex-wrap: wrap;
   &__item:not(:last-child) {
    margin-right: 8px;
  } 
  
-    @include for-size(tablet-only){
+   @include for-size(tablet-only){
     margin-bottom: 40px;
 
   &__item:nth-child(-n + 3){
@@ -16,14 +33,11 @@
   {margin-bottom:  30px;
   justify-content: center;}
 
-  @include for-size(desktop){
-      justify-content: center;
-  &__item {margin-bottom:  50px;
+  @include for-size(desktop)
+  {margin-bottom:  34px;
   }
 }
-  
-
-  &__btn {
+   .portfolio__btn {
     padding: 6px 22px;
     color: $title-color;
     background: $gray-bcg-color;
@@ -46,5 +60,8 @@
       border: none;
     }
   }
-}
+    
+
+ 
+
 

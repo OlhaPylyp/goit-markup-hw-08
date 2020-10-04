@@ -470,10 +470,7 @@ img {
 
 @media (min-width: 1200px) {
   .portfolio {
-    justify-content: center;
-  }
-  .portfolio__item {
-    margin-bottom: 50px;
+    margin-bottom: 34px;
   }
 }
 
