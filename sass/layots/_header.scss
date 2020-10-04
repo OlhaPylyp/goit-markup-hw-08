@@ -5,12 +5,8 @@
   border-bottom: 1px solid $border-header;
   @include for-size(tablet-only){
 padding:16px 0;}
-  @include for-size(tablet) {
-  padding: 21px 0;
-  }
-  @include for-size(desktop) {
-  padding: 25px 0;
-  }
+ 
+ 
 }
 .header-container {   
   display: flex;

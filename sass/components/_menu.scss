@@ -57,7 +57,7 @@ padding-bottom: 60px;
     }
 
     &__link--active {
-     padding: 34px 0;
+     padding: 32px 0;
       position: relative;
       color: $akcent-color;
       text-decoration: none;
@@ -78,6 +78,8 @@ padding-bottom: 60px;
       background-color: $akcent-color;
     }}
  @include for-size(desktop) {
+  //  &__link--active {
+  //    padding: 32px 0;}
      
  margin-right: 305px}
 }
