@@ -1,6 +1,5 @@
 .page-header {
-  position: relative;
- 
+position: relative; 
   line-height: $title-line-height;
   border-bottom: 1px solid $border-header;
   @include for-size(tablet-only){
@@ -15,18 +14,19 @@ padding:16px 0;}
   width: 100%;
   @include for-size(tablet) {
     align-items: center;
+
   }
 }
 
 
 .menu-button {   
-  // display: inline-block;
+ display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
   outline-color: none;
     width: 40px;
-  height: 40px;
+  height: 50px;
   background-color: transparent;
   &__icon-cross {
     display: none;
@@ -40,7 +40,7 @@ padding:16px 0;}
 &__icons {
     fill: $title-color;
   width: 40px;
-  height: 40px;
+height: 40px;
 
   // cursor: pointer;
   // z-index: 2;
@@ -60,7 +60,7 @@ padding:16px 0;}
     flex-direction: column;
     align-items: center;
     padding: 60px 0;
-    // top: 0;
+     top: 0%;
     right: 0;
     width: 100%;
     transform: translatey(-100%);
