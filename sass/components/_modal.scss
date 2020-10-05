@@ -7,13 +7,6 @@
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity $trancision;
-   @media screen and ( max-width: 768px) {
-     padding: 94px 15px;
-   }
-    @media screen and ( max-width: 768px){
-      overflow-y: scroll;
-    }
-  
   @include for-size(desctop-only){
   overflow-y: scroll;}
   @include for-size(tablet-only){
@@ -30,26 +23,31 @@
 .modal {
 padding: 40px;
   position: relative;
+  width: 100%;
   border-radius: 4px;
   background: $white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
    @include for-size (tablet){
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%) scaleX(1);
-   width: 100%;
-   max-width: 528px;
-  min-height: 581px;}
+  transform: translate(-50%, -50%) scaleX(1);}
+   @include for-size (tablet) {
+    width:450px;
 
-&__bt-close {
+  }
+@include for-size (desctop-only){
+   width:528px;
+  // height: 581px;}
+   }
+
+.bt-close {
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 30px;
-  height: 30px;
-  display: block;
+padding: 6px;
+  // display: block;
   align-items: center;
   background: $white;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -61,7 +59,7 @@ padding: 40px;
   cursor: pointer;  &:hover,
   &:focus {
     fill: $akcent-color;
-  }}}
+  }}
 
   
 
