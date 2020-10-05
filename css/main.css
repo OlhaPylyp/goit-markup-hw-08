@@ -1179,14 +1179,12 @@ img {
 @media (min-width: 768px) {
   .modal {
     width: 450px;
-    height: 609px;
   }
 }
 
 @media (min-width: 1200px) {
   .modal {
     width: 528px;
-    height: 581px;
   }
 }
 

@@ -36,12 +36,12 @@ padding: 40px;
     0px 2px 1px rgba(0, 0, 0, 0.2);
  @include for-size (tablet){
    width: 450px;
-    height: 609px;}
+    }
  
 
  @include for-size (desktop){
    width:528px;
-  height: 581px;
+  // height: 581px;
    }}
     
 
