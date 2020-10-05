@@ -208,7 +208,7 @@ img {
     align-items: center;
     padding: 60px 0;
     top: 0%;
-    right: 0;
+    right: 0%;
     width: 100%;
     transform: translatey(-100%);
     opacity: 0;
@@ -241,6 +241,7 @@ img {
     letter-spacing: 0.02em;
     border: none;
     font-size: 12px;
+    font-weight: 500;
   }
   .header-adr__item:not(:last-child) {
     margin-bottom: 16px;
@@ -1178,8 +1179,7 @@ img {
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 30px;
-  height: 30px;
+  padding: 6px;
   align-items: center;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
