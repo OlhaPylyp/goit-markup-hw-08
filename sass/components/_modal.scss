@@ -7,8 +7,9 @@
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity $trancision;
-  @include for-size(desctop-only){
-  overflow-y: scroll;}
+   @media screen and ( max-width: 1199px){
+      overflow-y: scroll;
+    }
   @include for-size(tablet-only){
   padding: 93px 15px;}}
 
@@ -32,15 +33,13 @@ padding: 40px;
   position: absolute;
   top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%) scaleX(1);}
-   @include for-size (tablet) {
-    width:450px;
-
-  }
-@include for-size (desctop-only){
-   width:528px;
-  // height: 581px;}
-   }}
+  transform: translate(-50%, -50%) scaleX(1); 
+     width:450px;}
+  
+ @media screen and(max_width: 1199px){
+    width:528px;
+height: 581px;}
+    }
 
 .bt-close {
   position: absolute;
