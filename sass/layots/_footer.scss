@@ -68,7 +68,7 @@ align-items: baseline;
 }
 .adress__text {
   color: $white;
- @include font($main-font-size, $text-line-height, $sec-font-weight);
+ @include font($main-font-size, $text-line-height, $text-font-weight);
  font-style: normal;
 }
 .adress__link:hover,

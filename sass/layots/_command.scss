@@ -17,6 +17,7 @@
     &:last-child {
       margin-bottom: 0px;
     }
+  
 
     @include for-size(tablet) {
       & {
@@ -46,12 +47,13 @@
 
   /* padding for comands name and profeccion */
   &-container {
-    padding: 30px 0 16px;
-    font-size: $btn-font-size;
+    padding: 30px 0 16px;    
+    @include font($btn-font-size, $comand-line-height, $sec-font-weight);
     text-align: center;
-
-    line-height: $comand-line-height;
     align-items: center;
+    &__text{
+     font-weight: $text-font-weight;
+    }
   }
 
   //   @include for-size(desktop) {

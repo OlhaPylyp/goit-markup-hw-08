@@ -703,9 +703,14 @@ img {
 .command-container {
   padding: 30px 0 16px;
   font-size: 16px;
-  text-align: center;
   line-height: 1.19;
+  font-weight: 500;
+  text-align: center;
   align-items: center;
+}
+
+.command-container__text {
+  font-weight: 400;
 }
 
 .client {
@@ -889,7 +894,7 @@ img {
   color: #ffffff;
   font-size: 14px;
   line-height: 1.7;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
 }
 
