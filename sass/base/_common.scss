@@ -48,12 +48,11 @@ img {
 }
 
 .flexbox {
-  @include for-size(tablet) {
-    display: flex;
-    flex-wrap: wrap;
+   @include for-size(tablet) {
+     display: flex;
+     flex-wrap: wrap;
+   }
   }
-}
-
 .title {
   margin-top: 0;
   margin-bottom: 10px;
