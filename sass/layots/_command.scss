@@ -48,12 +48,10 @@
   /* padding for comands name and profeccion */
   &-container {
     padding: 30px 0 16px;    
-    @include font($btn-font-size, $comand-line-height, $sec-font-weight);
+    @include font($btn-font-size, $comand-line-height, $text-font-weight);
     text-align: center;
     align-items: center;
-    &__text{
-     font-weight: $text-font-weight;
-    }
+  
   }
 
   //   @include for-size(desktop) {

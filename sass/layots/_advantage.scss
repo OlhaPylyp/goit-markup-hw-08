@@ -8,6 +8,7 @@
   &__text {
     line-height: $text-line-height;
     text-align: left;
+    font-weight: $text-font-weight;
   }
   &__text:not(:last-child) {
     margin-bottom: 30px;

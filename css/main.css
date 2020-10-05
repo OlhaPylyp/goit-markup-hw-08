@@ -545,6 +545,7 @@ img {
 .advantage__text {
   line-height: 1.7;
   text-align: left;
+  font-weight: 400;
 }
 
 .advantage__text:not(:last-child) {
@@ -704,13 +705,9 @@ img {
   padding: 30px 0 16px;
   font-size: 16px;
   line-height: 1.19;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
   align-items: center;
-}
-
-.command-container__text {
-  font-weight: 400;
 }
 
 .client {
