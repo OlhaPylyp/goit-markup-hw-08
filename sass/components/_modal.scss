@@ -7,9 +7,9 @@
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity $trancision;
-   @media screen and ( max-width: 1199px){
+  // @media screen and ( max-width: 768px){
       overflow-y: scroll;
-    }
+    
   @include for-size(tablet){
    padding: 93px 15px;}
 }
@@ -18,32 +18,34 @@
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
- & .modal {
-  transform: translateX(-50%, -50%) scale(0);
-}
+//  & .modal {
+//   transform: translateX(-50%, -50%) scale(0);
+// }
 }
 .modal {
+   
 padding: 40px;
   position: absolute;
-  width: 100%;
+  overflow-y: hidden;
+  // width: 100%;
   border-radius: 4px;
   background: $white;
-  top: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%) scaleX(1);
   
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-@include for-size (tablet){
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scaleX(1);}
- @include for-size (tablet) {
-   width:450px;
-  height: 609px;
-  }
-@include for-size (desktop){
-   width:528px;
-  height: 581px;}
-   }
+// @include for-size (tablet){
+ 
+//  @include for-size (tablet) {
+//    width:450px;
+//   height: 609px;
+//   }
+// @include for-size (desktop){
+//    width:528px;
+//   height: 581px;}
+//    }
     
 
 .bt-close {
