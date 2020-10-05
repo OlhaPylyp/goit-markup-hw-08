@@ -9,13 +9,23 @@ padding:16px 0;}
 }
 .header-container {   
   display: flex;
-  justify-content: space-between;  
-
+  justify-content: space-between; 
   width: 100%;
+   letter-spacing: $secondary-letter_spacing;
   @include for-size(tablet) {
     align-items: center;
-
   }
+  @include for-size(tablet-only){
+     @include font($title-sec-font-size, 1.36, $sec-font-weight);
+   
+  }
+  @include for-size(tablet-desktop){
+
+   @include font($label-font-size, $title-line-height, $sec-font-weight);   
+  }
+  @include for-size(desktop){
+  @include font($main-font-size, $main-line-height, $sec-font-weight);
+ }
 }
 
 
@@ -91,10 +101,8 @@ display: flex;
   display: flex;
   flex-direction: column;
   align-items: center;
-  letter-spacing: $secondary-letter_spacing;
-  border: none;
- font-size:$label-font-size; 
- font-weight: $sec-font-weight;
+  
+  border: none; 
   &__item:not(:last-child) {
     margin-bottom: 16px;} 
      &__icon {
@@ -121,14 +129,12 @@ display: flex;
      display: flex;
   flex-direction: column;
 //  align-items: center;
-  letter-spacing: $secondary-letter_spacing;
+  
   border: none;
-  font-size: $label-font-size;  
+  
   align-items: normal;
     margin-left: auto;
-    &__item {
-      font-size: $label-font-size;
-    }
+  
     &__item:not(:last-child) {
       margin-bottom: 10px;
     }
@@ -145,6 +151,7 @@ display: flex;
     }
 
     @include for-size(desktop) {
+      
       &__item {
         margin-right: 30px;
         margin-bottom: 0px;

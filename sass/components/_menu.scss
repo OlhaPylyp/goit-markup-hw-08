@@ -17,8 +17,6 @@ padding-bottom: 60px;
   &__link {
     color: $title-color;
     cursor: pointer;
-    @include font($main-font-size, 1.12, $sec-font-weight);
-    letter-spacing: $secondary-letter_spacing;
   }
 
   &__link--active {
@@ -52,16 +50,13 @@ padding-bottom: 60px;
     &__link {
       color: $title-color;
       cursor: pointer;
-      @include font($main-font-size, 1.12, $sec-font-weight);
-      letter-spacing: $secondary-letter_spacing;
     }
 
     &__link--active {
-     padding: 32px 0;
+     padding: 33px 0;
       position: relative;
       color: $akcent-color;
       text-decoration: none;
-
     }
 
     &__link--active::after {
@@ -78,8 +73,6 @@ padding-bottom: 60px;
       background-color: $akcent-color;
     }}
  @include for-size(desktop) {
-  //  &__link--active {
-  //    padding: 32px 0;}
      
  margin-right: 305px}
 }
