@@ -41,15 +41,14 @@ padding: 40px;
    width: 100%;
    max-width: 528px;
   min-height: 581px;}
-}
 
-.modal__bt-close {
+&__bt-close {
   position: absolute;
   top: 8px;
   right: 8px;
   width: 30px;
   height: 30px;
-  display: flex;
+  display: block;
   align-items: center;
   background: $white;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -61,7 +60,7 @@ padding: 40px;
   cursor: pointer;  &:hover,
   &:focus {
     fill: $akcent-color;
-  }}
+  }}}
 
   
 
