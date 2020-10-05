@@ -660,7 +660,6 @@ img {
 
 .page-footer {
   background: #2f303a;
-  font-weight: 400;
 }
 
 .footer-flexbox {
@@ -732,7 +731,7 @@ img {
   color: #ffffff;
   font-size: 14px;
   line-height: 1.7;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
 }
 

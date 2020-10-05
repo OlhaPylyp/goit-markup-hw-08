@@ -1,6 +1,5 @@
 .page-footer {
   background: $baner-bcg-color;
-  font-weight: 400;
  
 }
 .footer-flexbox { padding: 60px 15px;
@@ -64,12 +63,13 @@ align-items: baseline;
   display: block;
   color: $link-color;
   font-style: normal;
+  // font-weight: $sec-font-weight;
   transition: all $trancision;
 }
 .adress__text {
   color: $white;
- @include font($main-font-size, $text-line-height);
-     font-style: normal;
+ @include font($main-font-size, $text-line-height, $sec-font-weight);
+ font-style: normal;
 }
 .adress__link:hover,
 .adress__link:focus {
