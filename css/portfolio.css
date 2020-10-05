@@ -466,6 +466,12 @@ img {
   flex-wrap: wrap;
 }
 
+@media (min-width: 768px) {
+  .portfolio {
+    justify-content: center;
+  }
+}
+
 .portfolio__item:not(:last-child) {
   margin-right: 8px;
 }
@@ -479,7 +485,6 @@ img {
 @media (min-width: 768px) {
   .portfolio__item {
     margin-bottom: 30px;
-    justify-content: center;
   }
 }
 
