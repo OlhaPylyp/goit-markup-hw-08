@@ -140,7 +140,9 @@ img {
 
 .page-header {
   position: relative;
+  width: 100%;
   line-height: 1.17;
+  background: #ffffff;
   border-bottom: 1px solid #ececec;
 }
 
@@ -160,6 +162,7 @@ img {
 @media (min-width: 768px) {
   .header-container {
     align-items: center;
+    justify-content: center;
   }
 }
 
@@ -223,6 +226,10 @@ img {
   .menu-button__icons {
     display: none;
   }
+}
+
+.header-menu {
+  z-index: 1;
 }
 
 @media (max-width: 767px) {
@@ -462,16 +469,20 @@ img {
 }
 
 .hero-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 1600px;
+  padding: 118px 0;
   margin: 0 auto;
-  height: 400px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #c4c4c4;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/mobile/hero-img.jpg);
+}
+
+@media (min-width: 1200px) {
+  .hero-page {
+    padding: 200px 0;
+  }
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
@@ -854,6 +865,9 @@ img {
 .footer-container {
   flex-direction: column;
   text-align: center;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
 @media (min-width: 1200px) {
@@ -889,9 +903,6 @@ img {
 
 .adress__text {
   color: #ffffff;
-  font-size: 14px;
-  line-height: 1.7;
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -968,6 +979,9 @@ img {
 }
 
 .footer-form__input {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
   margin-bottom: 20px;
   padding: 15px 16px;
   background-color: transparent;
@@ -1089,16 +1103,28 @@ img {
   color: #2196f3;
 }
 
+.form__field:focus-within .form__label {
+  color: #2196f3;
+}
+
 /* ------------Стиль для чек бокса------------ */
 .chek {
   display: inline-flex;
   text-align: center;
   margin-bottom: 30px;
-  padding-left: 13px;
-  font-size: 14px;
-  line-height: 1.7;
-  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  font-weight: 400;
   color: #757575;
+}
+
+@media (min-width: 1200px) {
+  .chek {
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: 400;
+    justify-content: center;
+  }
 }
 
 .checkbox {
@@ -1171,21 +1197,19 @@ img {
   overflow-y: hidden;
   border-radius: 4px;
   background: #ffffff;
+  z-index: 1;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -40%) scaleX(1);
+  transform: translate(-50%, -50%) scaleX(1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-@media (min-width: 768px) {
-  .modal {
-    width: 450px;
-  }
+  width: 450px;
+  height: 609px;
 }
 
 @media (min-width: 1200px) {
   .modal {
     width: 528px;
+    height: 581px;
   }
 }
 

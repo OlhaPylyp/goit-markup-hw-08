@@ -33,6 +33,7 @@ align-items: baseline;
   
   flex-direction: column;
     text-align: center;
+     @include font($main-font-size, $text-line-height, $text-font-weight);
    @include for-size(desktop){ margin-right: 64px;
 
    }}
@@ -55,7 +56,7 @@ align-items: baseline;
 }
 .asdress {
   flex-direction: column;
-
+ 
 }
 .adress__link {
   margin-top: 9px;
@@ -63,12 +64,10 @@ align-items: baseline;
   display: block;
   color: $link-color;
   font-style: normal;
-  // font-weight: $sec-font-weight;
   transition: all $trancision;
 }
 .adress__text {
   color: $white;
- @include font($main-font-size, $text-line-height, $text-font-weight);
  font-style: normal;
 }
 .adress__link:hover,

@@ -1,19 +1,24 @@
 .page-header {
 position: relative; 
+width: 100%;
   line-height: $title-line-height;
+  background: $white;
+  // z-index: 1;
   border-bottom: 1px solid $border-header;
   @include for-size(tablet-only){
 padding:16px 0;}
+
  
  
 }
 .header-container {   
   display: flex;
-  justify-content: space-between; 
+  justify-content:  space-between; 
   width: 100%;
    letter-spacing: $secondary-letter_spacing;
   @include for-size(tablet) {
     align-items: center;
+    justify-content:  center;
   }
   @include for-size(tablet-only){
      @include font($title-sec-font-size, 1.36, $sec-font-weight);
@@ -30,6 +35,7 @@ padding:16px 0;}
 
 
 .menu-button {   
+  
  display: inline-block;
   margin: 0;
   padding: 0;
@@ -64,6 +70,8 @@ height: 40px;
 }}
 
 .header-menu {
+  z-index: 1;
+  
  @include for-size(tablet-only){
  position: absolute;
     display: flex;

@@ -5,7 +5,7 @@
 
   font-family: $sec-font-family;
   @include font(24px, $title-line-height);
-   @include for-size(tablet) {
+@include for-size(tablet) {
   padding: 25px 0;
   }
  @include for-size(desktop) {

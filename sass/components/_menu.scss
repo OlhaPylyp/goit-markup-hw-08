@@ -8,6 +8,7 @@
 }
 
 .menu {
+  
   @include for-size(tablet-only) {
     text-align: center;  
   &__item:not(:last-child) {

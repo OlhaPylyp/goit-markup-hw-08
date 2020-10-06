@@ -15,6 +15,7 @@
   color: rgba(255, 255, 255, 0.6);
 }
 .footer-form__input {
+  @include font($btn-font-size, 1.25, $text-font-weight);
 margin-bottom: 20px;
   padding: 15px 16px;
   background-color: transparent;

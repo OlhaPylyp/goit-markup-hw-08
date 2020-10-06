@@ -24,6 +24,7 @@
     @include font($label-font-size, $label-line-height);
     letter-spacing: $form-letter_spacing;
     color: $text-color;
+
   }
 
   &__textarea {
@@ -68,20 +69,37 @@
   &__textarea:focus {
     border-color: $akcent-color;
     fill: $akcent-color;
-  }
+       }
+  //      @include for-size(mobile-only){ 
+  // &__input:focus ~ 
+  //  .form__icon  ,
+  // &__input:focus,
+  // &__textarea:focus,
+  // &__label:focus
+  // {
+  //   border-color: $akcent-color;
+  //   fill: $akcent-color;}}
   &__link {
     text-decoration: underline;
     color: $akcent-color;
   }
+  &__field:focus-within .form__label{
+  color: $akcent-color;
+}
 }
 /* ------------Стиль для чек бокса------------ */
 .chek {
   display: inline-flex;
   text-align: center;
   margin-bottom: 30px;
-  padding-left: 13px;
-  @include font($main-font-size, $text-line-height, $sec-font-weight);
+ 
+  @include font($label-font-size, $title-line-height, $text-font-weight);
   color: $text-color;
+    @include for-size(desktop){
+      @include font($main-font-size, $text-sec-line-height, $text-font-weight);
+    justify-content: center;
+
+    }
 }
 .checkbox {
   position: absolute;
