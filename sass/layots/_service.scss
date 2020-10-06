@@ -12,6 +12,8 @@
 }}
   
 .service__item {
+
+  height: auto;
  
   border: 1px solid $border-portfolio;
   transition: all $trancision;
@@ -23,7 +25,10 @@
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
  @include for-size(tablet-desktop){
-    width: calc((100% - 30px) /2);
+    height: 440px;
+     &:first-child{height: 404px;}
+ 
+  width: calc((100% - 30px) /2);
   margin-right: 30px;
    
 &:nth-child(2n) {
