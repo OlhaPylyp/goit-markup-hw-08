@@ -19,20 +19,20 @@
 //       overflow-y: scroll;  
 //        padding: 93px 15px;}
 
-//    }
-  
+//    } 
 
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 //  & .modal {
-//   transform: translateX(-40%, -50%) scale(0);
+//     transform: translateX(-40%, -50%) scale(0);
 // }
 }
 .modal {
   position: relative;
-    width: 100%;
+ width: 100%;     
+
 padding: 40px;
   
   // overflow-y: hidden;
@@ -42,20 +42,17 @@ padding: 40px;
   z-index: 1;
    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  @include for-size (tablet){
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%) scaleX(1);  
- 
-
-   width: 450px;
-    height:auto;}
+   @include for-size (tablet){
+    position: absolute;
+  top: 60%;
+ left: 50%;  transform: translate(-50%, -50%) scaleX(1);  
+    max-width:450px;
+    }
     
  
 
  @include for-size (desktop){
-   width:528px;
-//  height: 581px;
+   width:528px;  height: auto;
    }}
     
 
