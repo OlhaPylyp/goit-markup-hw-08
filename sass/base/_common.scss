@@ -11,7 +11,7 @@ body {
 
 }
   main{
-   @include for-size(mobile){padding-top: 61px
+   @include for-size(tablet-only){padding-top: 61px
 
   }   @include for-size(tablet) {padding-top: 78px;}
   }

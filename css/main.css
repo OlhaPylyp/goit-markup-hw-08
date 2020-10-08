@@ -10,7 +10,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-@media (min-width: 480px) {
+@media (max-width: 767px) {
   main {
     padding-top: 61px;
   }
