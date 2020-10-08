@@ -1,12 +1,27 @@
 .page-header {
-position: relative; 
-width: 100%;
+   position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  background-color: $white;
+   text-decoration: none;
+  //  border-bottom: 1px solid #ECECEC;
+   @include for-size(tablet-only) {
+    padding: 10px 0px;}
+    @include for-size(tablet) {
+  padding: 21px 0;
+  }
+  
+// position: relative; 
+  // width: 100%;
+  // top: 0;
+
   line-height: $title-line-height;
   background: $white;
   // z-index: 1;
   border-bottom: 1px solid $border-header;
-  @include for-size(tablet-only){
-padding:16px 0;}
+//   @include for-size(tablet-only){
+// padding:16px 0;}
 
  
  

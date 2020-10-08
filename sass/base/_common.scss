@@ -5,14 +5,16 @@ body {
   font-family: $main-font-family;
   font-style: normal;
   letter-spacing: $main-letter_spacing;
+  //  @include for-size(mobile){padding-top: 61px}
+  //   @include for-size(tablet) {padding-top: 80px;}
+
+
 }
-//  .main{
-//    @include for-size(mobile){padding-top: 61px
+  main{
+   @include for-size(mobile){padding-top: 61px
 
-//    }
-//    @include for-size(tablet) {padding-top: 78px;}
-
-//  }
+  }   @include for-size(tablet) {padding-top: 78px;}
+  }
 .container {
   width: 100%;
   padding: 0 15px;
