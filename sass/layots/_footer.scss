@@ -35,6 +35,7 @@ align-items: baseline;
     text-align: center;
      @include font($main-font-size, $text-line-height, $text-font-weight);
    @include for-size(desktop){ margin-right: 64px;
+    text-align: left;
 
    }}
 

@@ -889,6 +889,7 @@ img {
 @media (min-width: 1200px) {
   .footer-container {
     margin-right: 64px;
+    text-align: left;
   }
 }
 
@@ -1234,7 +1235,7 @@ img {
 
 @media (min-width: 1200px) {
   .modal {
-    width: 528px;
+    max-width: 528px;
     height: auto;
   }
 }

@@ -9,7 +9,10 @@
 
 &__text {
   @include font($btn-font-size, $text-sec-line-height, $sec-font-weight);
-}}
+ 
+} &__link:hover, &__link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);}}
   
 .service__item {
 
@@ -20,10 +23,10 @@
    &:not(:last-child) {
      margin-bottom: 30px;
    }
-   &:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+//    &:hover {
+//   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+//     1px 4px 6px rgba(0, 0, 0, 0.16);
+// }
  @include for-size(tablet-desktop){
     height: 440px;
      &:first-child{height: 404px;}
@@ -77,7 +80,7 @@
 
   @include for-size(tablet-only) {
       padding: 77px 24px;
-      overflow: scroll;
+      // overflow: scroll;
     }
 
     @include for-size(tablet-desktop) {

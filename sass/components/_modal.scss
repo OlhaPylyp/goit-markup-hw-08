@@ -52,7 +52,7 @@ padding: 40px;
  
 
  @include for-size (desktop){
-   width:528px;  height: auto;
+   max-width:528px;  height: auto;
    }}
     
 
