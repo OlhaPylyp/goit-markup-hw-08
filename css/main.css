@@ -1226,7 +1226,7 @@ img {
 @media (min-width: 768px) {
   .modal {
     position: absolute;
-    top: 60%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%) scaleX(1);
     max-width: 450px;
